@@ -1,27 +1,26 @@
 <?php
 
 /**
- * Enumeration of HTTP response status codes.
+ * HTTP 响应状态码枚举。
  *
- * This enum represents the standard HTTP response status codes
- * defined by the Internet Assigned Numbers Authority (IANA) in
- * the Hypertext Transfer Protocol (HTTP) status code registry.
- * Each status code is associated with an integer value and a
- * descriptive name.
+ * 本枚举表示由互联网号码分配机构（IANA）在
+ * 超文本传输协议（HTTP）状态码注册表中
+ * 定义的标准 HTTP 响应状态码。
+ * 每个状态码都关联一个整数值和一个描述性名称。
  *
- * Usage example:
+ * 使用示例：
  * if (ResponseEnum::HTTP_OK->value === 200) {
- *     echo "Request was successful.";
+ *     echo "请求成功。";
  * }
  */
 enum ResponseEnum: int
 {
-    // 1xx: Informational
+    // 1xx：信息性
     case HTTP_CONTINUE = 100;
     case HTTP_SWITCHING_PROTOCOLS = 101;
     case HTTP_PROCESSING = 102;
 
-    // 2xx: Success
+    // 2xx：成功
     case HTTP_OK = 200;
     case HTTP_CREATED = 201;
     case HTTP_ACCEPTED = 202;
@@ -33,18 +32,18 @@ enum ResponseEnum: int
     case HTTP_ALREADY_REPORTED = 208;
     case HTTP_IM_USED = 226;
 
-    // 3xx: Redirection
+    // 3xx：重定向
     case HTTP_MULTIPLE_CHOICES = 300;
     case HTTP_MOVED_PERMANENTLY = 301;
     case HTTP_FOUND = 302;
     case HTTP_SEE_OTHER = 303;
     case HTTP_NOT_MODIFIED = 304;
     case HTTP_USE_PROXY = 305;
-    case HTTP_SWITCH_PROXY = 306; // No longer used
+    case HTTP_SWITCH_PROXY = 306; // 已不再使用
     case HTTP_TEMPORARY_REDIRECT = 307;
     case HTTP_PERMANENT_REDIRECT = 308;
 
-    // 4xx: Client Error
+    // 4xx：客户端错误
     case HTTP_BAD_REQUEST = 400;
     case HTTP_UNAUTHORIZED = 401;
     case HTTP_PAYMENT_REQUIRED = 402;
@@ -75,7 +74,7 @@ enum ResponseEnum: int
     case HTTP_REQUEST_HEADER_FIELDS_TOO_LARGE = 431;
     case HTTP_UNAVAILABLE_FOR_LEGAL_REASONS = 451;
 
-    // 5xx: Server Error
+    // 5xx：服务器错误
     case HTTP_INTERNAL_SERVER_ERROR = 500;
     case HTTP_NOT_IMPLEMENTED = 501;
     case HTTP_BAD_GATEWAY = 502;

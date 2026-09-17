@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 /**
- * Controller for choosing model and rendering SVG outputs
+ * 用于选择模型并渲染 SVG 输出的控制器
  */
 class RendererController
 {
@@ -21,39 +21,39 @@ class RendererController
     private $params;
 
     /**
-     * @var ResponseEnum $statusCode Response status code
+     * @var ResponseEnum $statusCode 响应状态码
      */
     private ResponseEnum $statusCode = ResponseEnum::HTTP_OK;
 
     /**
-     * Construct RendererController
+     * 构造 RendererController
      *
-     * @param array<string, string> $params request parameters
+     * @param array<string, string> $params 请求参数
      */
     public function __construct(array $params)
     {
         $this->params = $params;
 
-        // set up model and view
+        // 设置模型和视图
         try {
-            // create renderer model
+            // 创建渲染器模型
             $this->model = new RendererModel(__DIR__ . "/../templates/main.php", $params);
-            // create renderer view
+            // 创建渲染器视图
             $this->view = new RendererView($this->model);
         } catch (Exception $error) {
-            // create error rendering model
+            // 创建错误渲染模型
             $this->model = new ErrorModel(__DIR__ . "/../templates/error.php", $error->getMessage());
-            // create error rendering view
+            // 创建错误渲染视图
             $this->view = new ErrorView($this->model);
 
-            // set status code
+            // 设置状态码
             $this->statusCode =
                 $error instanceof IStatusException ? $error->getStatus() : ResponseEnum::HTTP_INTERNAL_SERVER_ERROR;
         }
     }
 
     /**
-     * Redirect to the demo site
+     * 重定向到演示站点
      */
     private function redirectToDemo(): void
     {
@@ -62,7 +62,7 @@ class RendererController
     }
 
     /**
-     * Set content type for page output
+     * 为页面输出设置内容类型
      */
     private function setContentType($type): void
     {
@@ -70,12 +70,12 @@ class RendererController
     }
 
     /**
-     * Set cache to refresh periodically
-     * This ensures any updates will roll out to all profiles
+     * 设置缓存以定期刷新
+     * 这可确保任何更新都会同步到所有配置文件中
      */
     private function setCacheRefreshDaily(): void
     {
-        // set cache to refresh once per day
+        // 将缓存设置为每天刷新一次
         $timestamp = gmdate("D, d M Y 23:59:00") . " GMT";
         header("Expires: $timestamp");
         header("Last-Modified: $timestamp");
@@ -84,29 +84,29 @@ class RendererController
     }
 
     /**
-     * Set output headers
+     * 设置输出响应头
      */
     public function setHeaders(): void
     {
-        // redirect to demo site if no text is given
+        // 若没有提供文本则重定向到演示站点
         if (!isset($this->params["lines"])) {
             $this->redirectToDemo();
         }
 
-        // set the content type header
+        // 设置内容类型响应头
         $this->setContentType("image/svg+xml");
 
-        // set cache headers
+        // 设置缓存响应头
         $this->setCacheRefreshDaily();
 
-        // set status code
+        // 设置状态码
         http_response_code($this->statusCode->value);
     }
 
     /**
-     * Get the rendered SVG
+     * 获取渲染后的 SVG
      *
-     * @return string The SVG to output
+     * @return string 要输出的 SVG
      */
     public function render(): string
     {

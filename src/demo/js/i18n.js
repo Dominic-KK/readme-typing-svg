@@ -1,10 +1,10 @@
-// Lightweight client-side i18n for the Readme Typing SVG demo
+// 用于 Readme Typing SVG 演示的轻量级客户端国际化（i18n）
 (() => {
   const LANG_KEY = "i18n-lang";
   const DEFAULT_LANG = "en";
   const messages = window.I18n || {};
 
-  // Safe localStorage access (may throw in private/restricted contexts)
+  // 安全的 localStorage 访问（在隐私/受限环境中可能抛出异常）
   const store = {
     get(key) {
       try {
@@ -17,14 +17,14 @@
       try {
         localStorage.setItem(key, value);
       } catch (e) {
-        /* ignore write failures */
+        /* 忽略写入失败 */
       }
     },
   };
 
   /**
-   * Detect the system/browser language and map it to a supported lang code.
-   * Priority: zh-TW / zh-HK / zh-Hant -> zh-TW; other zh* -> zh-CN; otherwise en.
+   * 检测系统/浏览器语言，并映射为受支持的语言代码。
+   * 优先级：zh-TW / zh-HK / zh-Hant -> zh-TW；其他 zh* -> zh-CN；否则为 en。
    */
   function detectSystemLang() {
     const raw = navigator.language || navigator.userLanguage || "";
@@ -34,33 +34,33 @@
     return DEFAULT_LANG;
   }
 
-  // User's explicit choice takes precedence; otherwise follow the system language.
+  // 用户的显式选择优先；否则遵循系统语言。
   let currentLang = store.get(LANG_KEY) || detectSystemLang();
   if (!messages[currentLang]) currentLang = DEFAULT_LANG;
 
   const i18n = {
-    /** Get a translated string. Supports {placeholder} substitution. */
+    /** 获取翻译后的字符串。支持 {占位符} 替换。 */
     t(key, params = {}) {
       const dict = messages[currentLang] || messages[DEFAULT_LANG] || {};
       let str = dict[key];
       if (str === undefined) str = messages[DEFAULT_LANG]?.[key] ?? key;
       return String(str).replace(/\{(\w+)\}/g, (_, k) => params[k] ?? "");
     },
-    /** Get the current language code */
+    /** 获取当前语言代码 */
     lang() {
       return currentLang;
     },
-    /** Switch language, persist it, then re-render the document */
+    /** 切换语言、持久化保存，然后重新渲染文档 */
     setLang(code, reApply = true) {
       if (!messages[code]) code = DEFAULT_LANG;
       currentLang = code;
       store.set(LANG_KEY, code);
       if (reApply) i18n.apply();
-      // notify subscribers (e.g. dynamic line labels) after re-render
+      // 重新渲染后通知订阅者（例如动态行标签）
       this._onChange && this._onChange(currentLang);
       return currentLang;
     },
-    /** Apply translations to every marked element in the document */
+    /** 将翻译应用到文档中所有带标记的元素上 */
     apply() {
       document.documentElement.lang = currentLang;
       document.title = i18n.t("demo.title");
@@ -78,21 +78,21 @@
       document.querySelectorAll("[data-i18n-title]").forEach((el) => {
         el.title = i18n.t(el.dataset.i18nTitle);
       });
-      // update the language selector to reflect the current language
+      // 更新语言选择器以反映当前语言
       const selector = document.getElementById("lang-select");
       if (selector) selector.value = currentLang;
     },
-    /** Notify registered callbacks (used for dynamically created content) */
+    /** 注册回调（用于动态创建的内容） */
     onChange(cb) {
       this._onChange = cb;
     },
     _onChange: null,
   };
 
-  // expose globally
+  // 暴露到全局作用域
   window.i18n = i18n;
 
-  // apply the persisted language once the document is ready
+  // 文档就绪后应用已持久化的语言
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => i18n.apply());
   } else {

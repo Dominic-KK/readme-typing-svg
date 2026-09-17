@@ -3,16 +3,16 @@
 declare(strict_types=1);
 
 /**
- * Class for converting Google Fonts to base 64 for displaying through SVG image
+ * 用于将 Google 字体转换为 base 64 以便通过 SVG 图片显示的类
  */
 class GoogleFontConverter
 {
     /**
-     * Fetch CSS from Google Fonts
+     * 从 Google Fonts 获取 CSS
      *
-     * @param string $font Google Font to fetch
-     * @param string $text Text to display in font
-     * @return string The CSS for displaying the font
+     * @param string $font 要获取的 Google 字体
+     * @param string $text 要以该字体显示的文本
+     * @return string 用于显示该字体的 CSS
      */
     public static function fetchFontCSS($font, $weight, $text): string
     {
@@ -24,9 +24,9 @@ class GoogleFontConverter
                 "display" => "fallback",
             ]);
         try {
-            // get the CSS for the font
+            // 获取该字体的 CSS
             $response = self::curlGetContents($url);
-            // find all font files and convert them to base64 Data URIs
+            // 找到所有字体文件并将其转换为 base64 数据 URI
             return self::encodeFonts($response);
         } catch (InvalidArgumentException $error) {
             return "";
@@ -34,17 +34,17 @@ class GoogleFontConverter
     }
 
     /**
-     * Encode font urls in string as base 64
+     * 将字符串中的字体 url 编码为 base 64
      *
-     * @param string $css The CSS from Google Fonts
-     * @return string CSS with urls replaced with base 64 Data URIs
+     * @param string $css 来自 Google Fonts 的 CSS
+     * @return string url 被替换为 base 64 数据 URI 的 CSS
      */
     private static function encodeFonts($css)
     {
         $urlRegex = '/\((https\:\/\/fonts\.gstatic\.com.+?)\) format\(\'(.*?)\'\)/';
         preg_match_all($urlRegex, $css, $matches);
         $urls = array_combine($matches[1], $matches[2]);
-        // go over all links and replace with data URI
+        // 遍历所有链接并替换为数据 URI
         foreach ($urls as $url => $fontType) {
             $response = self::curlGetContents($url);
             $dataURI = "data:font/{$fontType};base64," . base64_encode($response);
@@ -54,10 +54,10 @@ class GoogleFontConverter
     }
 
     /**
-     * Get the contents of a URL
+     * 获取一个 URL 的内容
      *
-     * @param string $url The URL to fetch
-     * @return string Response from URL
+     * @param string $url 要获取的 URL
+     * @return string 来自该 URL 的响应
      */
     private static function curlGetContents($url): string
     {

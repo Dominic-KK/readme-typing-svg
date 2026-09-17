@@ -1,4 +1,4 @@
-<!-- https://github.com/DenverCoder1/readme-typing-svg/ -->
+<!-- 用于渲染打字 SVG 的模板，参考：https://github.com/DenverCoder1/readme-typing-svg/ -->
 <svg xmlns='http://www.w3.org/2000/svg'
     xmlns:xlink='http://www.w3.org/1999/xlink'
     viewBox='0 0 <?= "$width $height" ?>'
@@ -11,23 +11,23 @@
     <?php for ($i = 0; $i <= $lastLineIndex; ++$i): ?>
         <path id='path<?= $i ?>'>
             <?php if (!$multiline): ?>
-                <!-- Single line -->
+                <!-- 单行模式 -->
                 <?php
-                // start after previous line
+                // 从上一行结束处开始
                 $begin = "d" . ($i - 1) . ".end";
                 if ($i == 0) {
-                    // if this is the first line, start at 0 seconds
-                    // and also after the last line if repeat is true
+                    // 若为第一行，则从 0 秒开始，
+                    // 若 repeat 为 true，则也在最后一行结束后开始
                     $begin = $repeat ? "0s;d$lastLineIndex.end" : "0s";
                 }
-                // don't delete text after typing the last line if repeat is false
+                // 若 repeat 为 false，则在打完最后一行后不删除文本
                 $freeze = !$repeat && $i == $lastLineIndex;
-                // empty line values
+                // 空行值
                 $yOffset = $height / 2;
                 $emptyLine = "m0,$yOffset h0";
                 $fullLine = "m0,$yOffset h$width";
                 $values = [$emptyLine, $fullLine, $fullLine, $freeze ? $fullLine : $emptyLine];
-                // keyTimes for the animation
+                // 动画的关键时间点
                 $keyTimes = [
                     "0",
                     (0.8 * $duration) / ($duration + $pause),
@@ -39,7 +39,7 @@
                     dur='<?= $duration + $pause ?>ms' fill='<?= $freeze ? "freeze" : "remove" ?>'
                     values='<?= implode(" ; ", $values) ?>' keyTimes='<?= implode(";", $keyTimes) ?>' />
             <?php else: ?>
-                <!-- Multiline -->
+                <!-- 多行模式 -->
                 <?php
                 $nextIndex = $i + 1;
                 $lineHeight = $size + 5;

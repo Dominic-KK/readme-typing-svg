@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 /**
- * View for rendering error messages
+ * 用于渲染错误消息的视图
  */
 class ErrorView
 {
@@ -11,7 +11,7 @@ class ErrorView
     private $model;
 
     /**
-     * Constructor for Error View
+     * Error 视图的构造函数
      * @param ErrorModel $model
      */
     public function __construct($model)
@@ -20,19 +20,19 @@ class ErrorView
     }
 
     /**
-     * Render SVG Output
+     * 渲染 SVG 输出
      * @return string
      */
     public function render()
     {
-        // import variables into symbol table
+        // 将变量导入符号表
         extract(["message" => $this->model->message]);
-        // render SVG with output buffering
+        // 使用输出缓冲渲染 SVG
         ob_start();
         include $this->model->template;
         $output = ob_get_contents();
         ob_end_clean();
-        // return rendered output
+        // 返回渲染后的输出
         return $output;
     }
 }

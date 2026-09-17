@@ -2,7 +2,7 @@
 
 require "../vendor/autoload.php";
 
-// load environment variables if .env exists
+// 若存在 .env 则加载环境变量
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->safeLoad();
 

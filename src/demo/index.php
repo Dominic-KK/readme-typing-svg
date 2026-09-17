@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- 全局站点标签 (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-48CYVH0XEF"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -36,7 +36,7 @@
 <body <?= isset($_COOKIE["darkmode"]) && $_COOKIE["darkmode"] == "on" ? 'data-theme="dark"' : "" ?>>
     <h1 data-i18n="demo.heading">⌨️ Readme Typing SVG | 🌹Dominic🌹</h1>
 
-    <!-- Language switcher -->
+    <!-- 语言切换器 -->
     <div class="lang-switch">
         <select id="lang-select" onchange="window.i18n.setLang(this.value)">
             <option value="en">English</option>
@@ -45,13 +45,13 @@
         </select>
     </div>
 
-    <!-- GitHub badges/links section -->
+    <!-- GitHub 徽章/链接区块 -->
     <div class="github">
-        <!-- GitHub Sponsors -->
+        <!-- GitHub Sponsors（赞助） -->
         <a class="github-button" href="https://github.com/sponsors/denvercoder1" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-heart" data-size="large" aria-label="Sponsor @denvercoder1 on GitHub">Sponsor</a>
-        <!-- View on GitHub -->
+        <!-- 在 GitHub 上查看 -->
         <a class="github-button" href="https://github.com/denvercoder1/readme-typing-svg" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="View denvercoder1/readme-typing-svg on GitHub">View on GitHub</a>
-        <!-- GitHub Star -->
+        <!-- GitHub Star（加星） -->
         <a class="github-button" href="https://github.com/denvercoder1/readme-typing-svg" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star denvercoder1/readme-typing-svg on GitHub">Star</a>
     </div>
 
@@ -59,7 +59,7 @@
         <div class="properties">
             <h2 data-i18n="add.text">Add your text</h2>
             <form class="parameters three-columns lines">
-                <!-- Lines are added in JavaScript -->
+                <!-- 行在 JavaScript 中添加 -->
             </form>
             <button class="add-line btn" onclick="return preview.addLines(1);" data-i18n="add.line">+ Add line</button>
 

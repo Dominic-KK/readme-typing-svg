@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 /**
- * View for rendering typing SVG
+ * 用于渲染打字 SVG 的视图
  */
 class RendererView
 {
@@ -11,7 +11,7 @@ class RendererView
     private $model;
 
     /**
-     * Constructor for Renderer View
+     * Renderer 视图的构造函数
      * @param RendererModel $model
      */
     public function __construct($model)
@@ -20,12 +20,12 @@ class RendererView
     }
 
     /**
-     * Render SVG Output
+     * 渲染 SVG 输出
      * @return string
      */
     public function render()
     {
-        // import variables into symbol table
+        // 将变量导入符号表
         extract([
             "lines" => $this->model->lines,
             "font" => $this->model->font,
@@ -43,12 +43,12 @@ class RendererView
             "repeat" => $this->model->repeat,
             "letterSpacing" => $this->model->letterSpacing,
         ]);
-        // render SVG with output buffering
+        // 使用输出缓冲渲染 SVG
         ob_start();
         include $this->model->template;
         $output = ob_get_contents();
         ob_end_clean();
-        // return rendered output
+        // 返回渲染后的输出
         return $output;
     }
 }

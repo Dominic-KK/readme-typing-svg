@@ -1,12 +1,12 @@
-// enable dark mode on load if user prefers dark themes and has not used the toggle
+// 若用户偏好深色主题且未使用过切换开关，则在加载时启用深色模式
 getCookie("darkmode") === null && window.matchMedia("(prefers-color-scheme: dark)").matches && darkmode();
 
 function toggleTheme() {
-  // turn on dark mode
+  // 开启深色模式
   if (document.body.getAttribute("data-theme") !== "dark") {
     darkmode();
   }
-  // turn off dark mode
+  // 关闭深色模式
   else {
     lightmode();
   }

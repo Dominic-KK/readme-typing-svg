@@ -1,4 +1,4 @@
-// English translations for the Readme Typing SVG - Dominic site
+// English translations - Readme Typing SVG - Dominic site 的英文翻译
 window.I18n = window.I18n || {};
 window.I18n["en"] = {
   "demo.title": "⌨️ Readme Typing SVG | 🌹Dominic🌹",

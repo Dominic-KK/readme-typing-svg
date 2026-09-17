@@ -298,14 +298,14 @@ a.icon {
   justify-content: space-between;
 }
 
-/* tooltips */
+/* 提示框 */
 .tooltip {
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 
-/* tooltip bubble */
+/* 提示气泡 */
 .tooltip:before {
   content: attr(title);
   position: absolute;
@@ -322,7 +322,7 @@ a.icon {
   opacity: 0;
 }
 
-/* tooltip bottom triangle */
+/* 提示框底部的三角箭头 */
 .tooltip:after {
   content: "";
   position: absolute;
@@ -333,7 +333,7 @@ a.icon {
   opacity: 0;
 }
 
-/* show tooltip on hover */
+/* 悬停时显示提示框 */
 .tooltip[title]:hover:before,
 .tooltip[title]:hover:after,
 .tooltip:disabled:hover:before,
@@ -346,7 +346,7 @@ a.icon {
   content: "You must first input valid text.";
 }
 
-/* link underline effect */
+/* 链接下划线效果 */
 a.underline-hover {
   position: relative;
   text-decoration: none;

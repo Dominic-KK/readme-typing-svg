@@ -3,65 +3,65 @@
 declare(strict_types=1);
 
 /**
- * Model for SVG outputs
+ * SVG 输出模型
  */
 class RendererModel
 {
-    /** @var array<string> $lines text to display */
+    /** @var array<string> $lines 要显示的文本 */
     public $lines;
 
-    /** @var string $font Font family */
+    /** @var string $font 字体族 */
     public $font;
 
-    /** @var string $font Font weight */
+    /** @var string $font 字体粗细 */
     public $weight;
 
-    /** @var string $color Font color */
+    /** @var string $color 字体颜色 */
     public $color;
 
-    /** @var string $background Background color */
+    /** @var string $background 背景颜色 */
     public $background;
 
-    /** @var int $size Font size */
+    /** @var int $size 字号 */
     public $size;
 
-    /** @var bool $center Whether or not to center text horizontally */
+    /** @var bool $center 是否水平居中文本 */
     public $center;
 
-    /** @var bool $vCenter Whether or not to center text vertically */
+    /** @var bool $vCenter 是否垂直居中文本 */
     public $vCenter;
 
-    /** @var int $width SVG width (px) */
+    /** @var int $width 宽度 (px) */
     public $width;
 
-    /** @var int $height SVG height (px) */
+    /** @var int $height 高度 (px) */
     public $height;
 
-    /** @var bool $multiline True = wrap to new lines, False = retype on same line */
+    /** @var bool $multiline True = 换行，False = 在同一行重新输入 */
     public $multiline;
 
-    /** @var int $duration print duration in milliseconds */
+    /** @var int $duration 打印时长（毫秒） */
     public $duration;
 
-    /** @var int $pause pause duration between lines in milliseconds */
+    /** @var int $pause 行与行之间的暂停时长（毫秒） */
     public $pause;
 
-    /** @var bool $repeat Whether to loop around to the first line after the last */
+    /** @var bool $repeat 是否在末尾循环回到第一行 */
     public $repeat;
 
-    /** @var string $separator Line separator */
+    /** @var string $separator 行分隔符 */
     public $separator;
 
-    /** @var bool $random True = Sort lines in random order */
+    /** @var bool $random True = 随机顺序排列行 */
     public $random;
 
-    /** @var string $fontCSS CSS required for displaying the selected font */
+    /** @var string $fontCSS 显示所选字体所需的 CSS */
     public $fontCSS;
 
-    /** @var string $letterSpacing Letter spacing */
+    /** @var string $letterSpacing 字间距 */
     public $letterSpacing;
 
-    /** @var string $template Path to template file */
+    /** @var string $template 模板文件路径 */
     public $template;
 
     /** @var array<string, string> $DEFAULTS */
@@ -85,10 +85,10 @@ class RendererModel
     ];
 
     /**
-     * Construct RendererModel
+     * 构造 RendererModel
      *
-     * @param string $template Path to the template file
-     * @param array<string, string> $params request parameters
+     * @param string $template 模板文件路径
+     * @param array<string, string> $params 请求参数
      */
     public function __construct($template, $params)
     {
@@ -114,10 +114,10 @@ class RendererModel
     }
 
     /**
-     * Validate lines and return array of string
+     * 校验行数据并返回字符串数组
      *
-     * @param string $lines Semicolon-separated lines parameter
-     * @return array<string> escaped array of lines
+     * @param string $lines 以分号分隔的 lines 参数
+     * @return array<string> 转义后的行数组
      */
     private function checkLines($lines)
     {
@@ -131,46 +131,46 @@ class RendererModel
         if ($this->random) {
             shuffle($exploded);
         }
-        // escape special characters to prevent code injection
+        // 转义特殊字符以防止注入
         return array_map("htmlspecialchars", $exploded);
     }
 
     /**
-     * Validate font family and return valid string
+     * 校验字体族并返回合法的字符串
      *
-     * @param string $font Font name parameter
-     * @return string Sanitized font name
+     * @param string $font 字体名称参数
+     * @return string 净化后的字体名称
      */
     private function checkFont($font)
     {
-        // return sanitized font name
+        // 返回净化后的字体名称
         return preg_replace("/[^0-9A-Za-z\- ]/", "", $font);
     }
 
     /**
-     * Validate font color and return valid string
+     * 校验字体颜色并返回合法的字符串
      *
-     * @param string $color Color parameter
-     * @param string $field Field name for displaying in case of error
-     * @return string Sanitized color with preceding hash symbol
+     * @param string $color 颜色参数
+     * @param string $field 出错时用于显示的字段名
+     * @return string 净化后的颜色，前缀带 # 号
      */
     private function checkColor($color, $field)
     {
         $sanitized = (string) preg_replace("/[^0-9A-Fa-f]/", "", $color);
-        // if color is not a valid length, use the default
+        // 若颜色不是合法长度，则使用默认值
         if (!in_array(strlen($sanitized), [3, 4, 6, 8])) {
             return $this->DEFAULTS[$field];
         }
-        // return sanitized color
+        // 返回净化后的颜色
         return "#" . $sanitized;
     }
 
     /**
-     * Validate positive numeric parameter and return valid integer
+     * 校验正数数值参数并返回合法的整数
      *
-     * @param string $num Parameter to validate
-     * @param string $field Field name for displaying in case of error
-     * @return int Sanitized digits and int
+     * @param string $num 要校验的参数
+     * @param string $field 出错时用于显示的字段名
+     * @return int 净化后的数字和整数
      */
     private function checkNumberPositive($num, $field)
     {
@@ -182,11 +182,11 @@ class RendererModel
     }
 
     /**
-     * Validate non-negative numeric parameter and return valid integer
+     * 校验非负数数值参数并返回合法的整数
      *
-     * @param string $num Parameter to validate
-     * @param string $field Field name for displaying in case of error
-     * @return int Sanitized digits and int
+     * @param string $num 要校验的参数
+     * @param string $field 出错时用于显示的字段名
+     * @return int 净化后的数字和整数
      */
     private function checkNumberNonNegative($num, $field)
     {
@@ -198,10 +198,10 @@ class RendererModel
     }
 
     /**
-     * Validate "true" or "false" value as string and return boolean
+     * 将 "true" 或 "false" 字符串值校验为布尔值
      *
-     * @param string $bool Boolean parameter as string
-     * @return boolean Whether or not $bool is set to "true"
+     * @param string $bool 以字符串形式给出的布尔参数
+     * @return boolean $bool 是否等于 "true"
      */
     private function checkBoolean($bool)
     {
@@ -209,40 +209,40 @@ class RendererModel
     }
 
     /**
-     * Fetch CSS with Base-64 encoding from Google Fonts
+     * 从 Google Fonts 获取带 Base-64 编码的 CSS
      *
-     * @param string $font Google Font to fetch
-     * @param string $text Text to display in font
-     * @return string The CSS for displaying the font
+     * @param string $font 要获取的 Google 字体
+     * @param string $text 要以该字体显示的文本
+     * @return string 用于显示该字体的 CSS
      */
     private function fetchFontCSS($font, $weight, $text)
     {
-        // local Chinese font hosted on this site
+        // 本网站自托管的中文字体
         if ($font === "CangErJinKai") {
             return "<style>\n@font-face {\nfont-family: 'CangErJinKai';\nsrc: url('https://dk-bucket.dominic.dpdns.org/picgo/2026/09/171056-88a.ttf') format('truetype');\n}\n</style>\n";
         }
-        // skip checking if left as default
+        // 若保持默认值则跳过检查
         if ($font != $this->DEFAULTS["font"]) {
-            // fetch and convert from Google Fonts
+            // 从 Google Fonts 获取并转换
             $from_google_fonts = GoogleFontConverter::fetchFontCSS($font, $weight, $text);
             if ($from_google_fonts) {
-                // return the CSS for displaying the font
+                // 返回用于显示该字体的 CSS
                 return "<style>\n{$from_google_fonts}</style>\n";
             }
         }
-        // font is not found
+        // 字体未找到
         return "";
     }
 
     /**
-     * Validate unit for size properties
+     * 校验尺寸属性的单位
      *
-     * This method validates if the given unit is a valid CSS size unit.
-     * It supports various units such as px, em, rem, pt, pc, in, cm, mm,
-     * ex, ch, vh, vw, vmin, vmax, and percentages.
+     * 此方法校验给定的单位是否为合法的 CSS 尺寸单位。
+     * 支持 px、em、rem、pt、pc、in、cm、mm、
+     * ex、ch、vh、vw、vmin、vmax 以及百分比等各种单位。
      *
-     * @param string $unit Unit for validation
-     * @return bool True if valid, false otherwise
+     * @param string $unit 要校验的单位
+     * @return bool 校验通过返回 true，否则返回 false
      */
     private function isValidUnit($unit)
     {
@@ -250,26 +250,26 @@ class RendererModel
     }
 
     /**
-     * Validate letter spacing
+     * 校验字间距
      *
-     * This method validates the letter spacing property for fonts.
-     * It allows specific keywords (normal, inherit, initial, revert, revert-layer, unset)
-     * and valid CSS size units.
+     * 此方法校验字体的字间距属性。
+     * 允许特定的关键字（normal、inherit、initial、revert、revert-layer、unset）
+     * 以及合法的 CSS 尺寸单位。
      *
-     * @param string $letterSpacing Letter spacing for validation
-     * @return string Validated letter spacing
+     * @param string $letterSpacing 要校验的字间距
+     * @return string 校验后的字间距
      */
     private function checkLetterSpacing($letterSpacing)
     {
-        // List of valid keywords for letter-spacing
+        // 字间距的合法关键字列表
         $keywords = "normal|inherit|initial|revert|revert-layer|unset";
 
-        // Check if the input matches one of the keywords or a valid unit
+        // 校验输入是否匹配某个关键字或合法单位
         if (preg_match("/^($keywords)$/", $letterSpacing) || $this->isValidUnit($letterSpacing)) {
             return $letterSpacing;
         }
 
-        // Return the default letter spacing value if the input is invalid
+        // 若输入不合法，则返回默认的字间距值
         return $this->DEFAULTS["letterSpacing"];
     }
 }
