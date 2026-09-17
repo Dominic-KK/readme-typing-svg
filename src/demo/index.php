@@ -97,20 +97,21 @@
                         </svg>
                     </a>
                 </div>
-                <select class="param" id="letterSpacing" name="letterSpacing" alt="Letter spacing">
-                    <option value="normal">normal</option>
-                    <option value="inherit">inherit</option>
-                    <option value="initial">initial</option>
-                    <option value="revert">revert</option>
-                    <option value="revert-layer">revert-layer</option>
-                    <option value="unset">unset</option>
-                    <option value="0.1em">0.1em</option>
-                    <option value="0.2em">0.2em</option>
-                    <option value="0.3em">0.3em</option>
-                    <option value="0.5em">0.5em</option>
-                    <option value="1px">1px</option>
-                    <option value="2px">2px</option>
-                </select>
+                <input class="param" type="text" id="letterSpacing" name="letterSpacing" alt="Letter spacing" placeholder="normal" value="normal" list="letterSpacingOptions">
+                <datalist id="letterSpacingOptions">
+                    <option value="normal"></option>
+                    <option value="inherit"></option>
+                    <option value="initial"></option>
+                    <option value="revert"></option>
+                    <option value="revert-layer"></option>
+                    <option value="unset"></option>
+                    <option value="0.1em"></option>
+                    <option value="0.2em"></option>
+                    <option value="0.3em"></option>
+                    <option value="0.5em"></option>
+                    <option value="1px"></option>
+                    <option value="2px"></option>
+                </datalist>
 
                 <label for="duration" data-i18n="duration">Duration (ms per line)</label>
                 <input class="param" type="number" id="duration" name="duration" alt="Print duration (ms)" placeholder="5000" value="5000">
