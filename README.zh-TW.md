@@ -147,18 +147,18 @@
 
 這樣做可以獲得更好的可用性（uptime），並且對自訂有更多的掌控權（你可以為你的用途修改程式碼）。
 
-你可以在任何安裝了 PHP 的網站伺服器上部屬這些 PHP 檔案，也可以作為 Heroku 應用程式部屬。
+你可以在任何安裝了 PHP 的網站伺服器上部屬這些 PHP 檔案，也可以作為 Vercel 應用程式部屬。
 
-### 部屬到 Heroku 的逐步說明
+### 部屬到 Vercel 的逐步說明
 
-1. 登入 **Heroku**，或前往 <https://heroku.com> 建立新帳號
-2. 點擊下方的 "Deploy to Heroku"（部屬到 Heroku）按鈕
+1. 將程式碼推送到你的 GitHub 儲存庫（例如 `Dominic-KK/readme-typing-svg`）
+2. 前往 <https://vercel.com> 登入，點擊 **"Add New" → "Project"**（新增專案）
+3. 選擇並匯入你的儲存庫
+4. Vercel 會自動識別專案中的 `vercel.json`，使用 **Container（Docker）** 執行時建置 `Dockerfile.vercel`（內建 FrankenPHP + Caddy）
+5. 點擊 **Deploy**（部屬），等待建置完成
+6. 部屬完成後，使用 Vercel 提供的網域 `https://你的專案.vercel.app` 替換 `readme-typing-svg.demolab.com`
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg "部屬到 Heroku")](https://heroku.com/deploy?template=https://github.com/Dominic-KK/readme-typing-svg/tree/main)
-
-3. 在出現的頁面上，點擊表單末尾的 **"Deploy App"**（部屬應用程式）
-4. 應用程式部屬完成後，點擊 **"Manage App"**（管理應用程式）進入儀表板（dashboard）
-5. 在設定（settings）中向下捲動到 **Domains**（網域）區段，找到你要用來替換 `readme-typing-svg.demolab.com` 的 URL
+> 也支援使用 [Vercel CLI](https://vercel.com/docs/cli) 部屬：在專案根目錄執行 `vercel` 並依照提示操作即可。
 
 ## 🤗 參與貢獻（Contributing）
 
@@ -186,8 +186,6 @@
 用 ❤️ 和 PHP 製作
 
 <!-- markdownlint-disable MD033 -->
-
-<a href="https://heroku.com/"><img alt="由 Heroku 提供支援" title="由 Heroku 提供支援" src="https://img.shields.io/badge/-Powered%20by%20Heroku-6567a5?style=for-the-badge&logo=heroku&logoColor=white"/></a>
 
 <!-- markdownlint-enable MD033 -->
 

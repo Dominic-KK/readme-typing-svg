@@ -31,7 +31,7 @@
 
 你可以在这里通过实时预览轻松定制你的 Typing SVG。
 
-<https://readme-typing-svg.demolab.com/demo/>
+<http://dynamictyping.dominickk.top/>
 
 [![演示站点](https://user-images.githubusercontent.com/20955511/183703055-42ec8754-d84c-414f-8132-a02974224aa1.gif "演示站点")](https://readme-typing-svg.demolab.com/demo/)
 
@@ -147,18 +147,18 @@
 
 这样做可以获得更好的可用性（uptime），并且对定制有更多的控制权（你可以为你的用途修改代码）。
 
-你可以在任何安装了 PHP 的网站服务器上部署这些 PHP 文件，也可以作为 Heroku 应用部署。
+你可以在任何安装了 PHP 的网站服务器上部署这些 PHP 文件，也可以作为 Vercel 应用部署。
 
-### 部署到 Heroku 的逐步说明
+### 部署到 Vercel 的逐步说明
 
-1. 登录 **Heroku**，或前往 <https://heroku.com> 创建新账号
-2. 点击下方的 "Deploy to Heroku"（部署到 Heroku）按钮
+1. 将代码推送到你的 GitHub 仓库（例如 `Dominic-KK/readme-typing-svg`）
+2. 前往 <https://vercel.com> 登录，点击 **"Add New" → "Project"**（新建项目）
+3. 选择并导入你的仓库
+4. Vercel 会自动识别项目中的 `vercel.json`，使用 **Container（Docker）** 运行时构建 `Dockerfile.vercel`（内置 FrankenPHP + Caddy）
+5. 点击 **Deploy**（部署），等待构建完成
+6. 部署完成后，使用 Vercel 提供的域名 `https://你的项目.vercel.app` 替换 `readme-typing-svg.demolab.com`
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg "部署到 Heroku")](https://heroku.com/deploy?template=https://github.com/Dominic-KK/readme-typing-svg/tree/main)
-
-3. 在出现的页面上，点击表单末尾的 **"Deploy App"**（部署应用）
-4. 应用部署完成后，点击 **"Manage App"**（管理应用）进入仪表盘（dashboard）
-5. 在设置（settings）中向下滚动到 **Domains**（域名）部分，找到你要用来替换 `readme-typing-svg.demolab.com` 的 URL
+> 也支持使用 [Vercel CLI](https://vercel.com/docs/cli) 部署：在项目根目录执行 `vercel` 并按照提示操作即可。
 
 ## 🤗 参与贡献（Contributing）
 
@@ -186,8 +186,6 @@
 用 ❤️ 和 PHP 制作
 
 <!-- markdownlint-disable MD033 -->
-
-<a href="https://heroku.com/"><img alt="由 Heroku 提供支持" title="由 Heroku 提供支持" src="https://img.shields.io/badge/-Powered%20by%20Heroku-6567a5?style=for-the-badge&logo=heroku&logoColor=white"/></a>
 
 <!-- markdownlint-enable MD033 -->
 

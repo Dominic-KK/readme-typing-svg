@@ -1,0 +1,10 @@
+:{$PORT:80} {
+	# 站点根目录指向 src（index.php 所在目录）
+	root * /app/src
+
+	# 压缩响应
+	encode zstd gzip
+
+	# 启用 PHP（含自动处理 index.php、静态资源、URL 重写）
+	php_server
+}

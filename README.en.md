@@ -147,18 +147,18 @@ If you can, it is preferable to host the files on your own server.
 
 Doing this can lead to better uptime and more control over customization (you can modify the code for your usage).
 
-You can deploy the PHP files on any website server with PHP installed or as a Heroku app.
+You can deploy the PHP files on any website server with PHP installed or as a Vercel app.
 
-### Step-by-step instructions for deploying to Heroku
+### Step-by-step instructions for deploying to Vercel
 
-1. Sign in to **Heroku** or create a new account at <https://heroku.com>
-2. Click the "Deploy to Heroku" button below
+1. Push the code to your GitHub repository (e.g. `Dominic-KK/readme-typing-svg`)
+2. Sign in at <https://vercel.com>, click **"Add New" → "Project"**
+3. Select and import your repository
+4. Vercel automatically detects the `vercel.json` file in the project and builds `Dockerfile.vercel` using the **Container (Docker)** runtime (built-in FrankenPHP + Caddy)
+5. Click **Deploy** and wait for the build to complete
+6. Once deployed, use the Vercel-provided domain `https://your-project.vercel.app` in place of `readme-typing-svg.demolab.com`
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg "Deploy to Heroku")](https://heroku.com/deploy?template=https://github.com/Dominic-KK/readme-typing-svg/tree/main)
-
-3. On the page that comes up, click **"Deploy App"** at the end of the form
-4. Once the app is deployed, click **"Manage App"** to go to the dashboard
-5. Scroll down to the **Domains** section in the settings to find the URL you will use in place of `readme-typing-svg.demolab.com`
+> You can also deploy with the [Vercel CLI](https://vercel.com/docs/cli): run `vercel` from the project root and follow the prompts.
 
 ## 🤗 Contributing
 
@@ -186,8 +186,6 @@ Refer to [CONTRIBUTING.md](/CONTRIBUTING.en.md) for more details on contributing
 Made with ❤️ and PHP
 
 <!-- markdownlint-disable MD033 -->
-
-<a href="https://heroku.com/"><img alt="Powered by Heroku" title="Powered by Heroku" src="https://img.shields.io/badge/-Powered%20by%20Heroku-6567a5?style=for-the-badge&logo=heroku&logoColor=white"/></a>
 
 <!-- markdownlint-enable MD033 -->
 

@@ -3,3 +3,4 @@ vendor/
 .env
 .idea
 vendor.zip
+.vercel/
