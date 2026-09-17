@@ -142,9 +142,11 @@ const preview = {
     for (let i = 0; i < count; i++) {
       const parent = document.querySelector(".lines");
       const index = parent.querySelectorAll("input").length + 1;
+      // placeholder, translated
+      const placeholder = window.i18n ? window.i18n.t("line.placeholder") : "Enter text here";
       // label
       const label = document.createElement("label");
-      label.innerText = `Line ${index}`;
+      label.innerText = window.i18n ? window.i18n.t("line", { n: index }) : `Line ${index}`;
       label.setAttribute("for", `line-${index}`);
       label.dataset.index = index;
       // line input box
@@ -153,7 +155,7 @@ const preview = {
       input.type = "text";
       input.id = `line-${index}`;
       input.name = `line-${index}`;
-      input.placeholder = "Enter text here";
+      input.placeholder = placeholder;
       input.value = this.dummyText[(index - 1) % this.dummyText.length];
       input.dataset.index = index;
       // removal button
@@ -197,7 +199,7 @@ const preview = {
       if (labelIndex > index) {
         label.dataset.index = labelIndex - 1;
         label.setAttribute("for", `line-${labelIndex - 1}`);
-        label.innerText = `Line ${labelIndex - 1}`;
+        label.innerText = window.i18n ? window.i18n.t("line", { n: labelIndex - 1 }) : `Line ${labelIndex - 1}`;
       }
     });
     const inputs = parent.querySelectorAll(".param");
@@ -305,7 +307,7 @@ const clipboard = {
   copy(btn, text) {
     navigator.clipboard.writeText(text).then(() => {
       // set tooltip text
-      btn.title = "Copied!";
+      btn.title = window.i18n ? window.i18n.t("copied") : "Copied!";
     });
   },
 
@@ -340,6 +342,16 @@ const tooltip = {
 // refresh preview on interactions with the page
 document.addEventListener("keyup", () => preview.update(), false);
 document.addEventListener("click", () => preview.update(), false);
+
+// when the language changes, re-label the dynamically added line inputs
+if (window.i18n) {
+  window.i18n.onChange(() => {
+    document.querySelectorAll(".lines label[data-index]").forEach((label) => {
+      const n = Number(label.dataset.index);
+      label.innerText = window.i18n.t("line", { n });
+    });
+  });
+}
 
 // checkbox listener
 document.querySelector(".show-border input").addEventListener("change", function () {

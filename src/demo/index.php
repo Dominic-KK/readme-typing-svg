@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/loader.css">
     <link rel="stylesheet" href="./css/toggle-dark.css">
+    <script type="text/javascript" src="./i18n/en.js" defer></script>
+    <script type="text/javascript" src="./i18n/zh-CN.js" defer></script>
+    <script type="text/javascript" src="./js/i18n.js" defer></script>
     <script type="text/javascript" src="./js/script.js" defer></script>
     <script type="text/javascript" src="./js/toggle-dark.js" defer></script>
     <script type="text/javascript" src="./js/jscolor.min.js" defer></script>
@@ -30,7 +33,15 @@
 </head>
 
 <body <?= isset($_COOKIE["darkmode"]) && $_COOKIE["darkmode"] == "on" ? 'data-theme="dark"' : "" ?>>
-    <h1>⌨️ Readme Typing SVG</h1>
+    <h1 data-i18n="demo.heading">⌨️ Readme Typing SVG</h1>
+
+    <!-- Language switcher -->
+    <div class="lang-switch">
+        <select id="lang-select" onchange="window.i18n.setLang(this.value)">
+            <option value="en">English</option>
+            <option value="zh-CN">简体中文</option>
+        </select>
+    </div>
 
     <!-- GitHub badges/links section -->
     <div class="github">
@@ -44,34 +55,34 @@
 
     <div class="container">
         <div class="properties">
-            <h2>Add your text</h2>
+            <h2 data-i18n="add.text">Add your text</h2>
             <form class="parameters three-columns lines">
                 <!-- Lines are added in JavaScript -->
             </form>
-            <button class="add-line btn" onclick="return preview.addLines(1);">+ Add line</button>
+            <button class="add-line btn" onclick="return preview.addLines(1);" data-i18n="add.line">+ Add line</button>
 
-            <h2>Options</h2>
+            <h2 data-i18n="options">Options</h2>
             <form class="parameters two-columns options">
                 <div class="label-group">
-                    <label for="font">Font</label>
-                    <a href="https://fonts.google.com/" target="_blank" class="icon tooltip" title="Enter a font name from Google Fonts">
+                    <label for="font" data-i18n="font">Font</label>
+                    <a href="https://fonts.google.com/" target="_blank" class="icon tooltip" data-i18n-title="font.tooltip" title="Enter a font name from Google Fonts">
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 6C9.831 6 8.066 7.765 8.066 9.934h2C10.066 8.867 10.934 8 12 8s1.934.867 1.934 1.934c0 .598-.481 1.032-1.216 1.626-.255.207-.496.404-.691.599C11.029 13.156 11 14.215 11 14.333V15h2l-.001-.633c.001-.016.033-.386.441-.793.15-.15.339-.3.535-.458.779-.631 1.958-1.584 1.958-3.182C15.934 7.765 14.169 6 12 6zM11 16H13V18H11z"></path>
                             <path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M12,20c-4.411,0-8-3.589-8-8s3.589-8,8-8 s8,3.589,8,8S16.411,20,12,20z"></path>
                         </svg>
                     </a>
                 </div>
-                <input class="param" type="text" id="font" name="font" alt="Font name" placeholder="Fira Code" value="Fira Code" pattern="^[A-Za-z0-9\- ]*$" title="Font from Google Fonts. Only letters, numbers, and spaces.">
+                <input class="param" type="text" id="font" name="font" alt="Font name" placeholder="Fira Code" value="Fira Code" pattern="^[A-Za-z0-9\- ]*$" data-i18n-title="font.title" title="Font from Google Fonts. Only letters, numbers, and spaces.">
 
-                <label for="weight">Font weight</label>
+                <label for="weight" data-i18n="weight">Font weight</label>
                 <input class="param" type="number" id="weight" name="weight" alt="Font weight" placeholder="400" value="400" min="100" max="900" step="100">
 
-                <label for="size">Font size</label>
+                <label for="size" data-i18n="size">Font size</label>
                 <input class="param" type="number" id="size" name="size" alt="Font size" placeholder="20" value="20">
 
                 <div class="label-group">
-                    <label for="letterSpacing">Letter spacing</label>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing" target="_blank" class="icon tooltip" title="Enter any css value for the letter-spacing property">
+                    <label for="letterSpacing" data-i18n="letterSpacing">Letter spacing</label>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing" target="_blank" class="icon tooltip" data-i18n-title="letterSpacing.tooltip" title="Enter any css value for the letter-spacing property">
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 6C9.831 6 8.066 7.765 8.066 9.934h2C10.066 8.867 10.934 8 12 8s1.934.867 1.934 1.934c0 .598-.481 1.032-1.216 1.626-.255.207-.496.404-.691.599C11.029 13.156 11 14.215 11 14.333V15h2l-.001-.633c.001-.016.033-.386.441-.793.15-.15.339-.3.535-.458.779-.631 1.958-1.584 1.958-3.182C15.934 7.765 14.169 6 12 6zM11 16H13V18H11z"></path>
                             <path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M12,20c-4.411,0-8-3.589-8-8s3.589-8,8-8 s8,3.589,8,8S16.411,20,12,20z"></path>
@@ -80,98 +91,98 @@
                 </div>
                 <input class="param" type="text" id="letterSpacing" name="letterSpacing" alt="Letter spacing" placeholder="normal" value="normal">
 
-                <label for="duration">Duration (ms per line)</label>
+                <label for="duration" data-i18n="duration">Duration (ms per line)</label>
                 <input class="param" type="number" id="duration" name="duration" alt="Print duration (ms)" placeholder="5000" value="5000">
 
-                <label for="pause">Pause (ms after line)</label>
+                <label for="pause" data-i18n="pause">Pause (ms after line)</label>
                 <input class="param" type="number" id="pause" name="pause" alt="Pause duration (ms)" placeholder="1000" value="1000">
 
-                <label for="color">Font color</label>
+                <label for="color" data-i18n="color">Font color</label>
                 <input class="param jscolor jscolor-active" id="color" name="color" alt="Font color" data-jscolor="{ format: 'hexa' }" value="#36BCF7">
 
-                <label for="background">Background color</label>
+                <label for="background" data-i18n="background">Background color</label>
                 <input class="param jscolor jscolor-active" id="background" name="background" alt="Background color" data-jscolor="{ format: 'hexa' }" value="#00000000">
 
-                <label for="center">Horizontally Centered</label>
+                <label for="center" data-i18n="center">Horizontally Centered</label>
                 <select class="param" id="center" name="center" alt="Horizontally Centered">
                     <option value="false">false</option>
                     <option value="true">true</option>
                 </select>
 
-                <label for="vCenter">Vertically Centered</label>
+                <label for="vCenter" data-i18n="vCenter">Vertically Centered</label>
                 <select class="param" id="vCenter" name="vCenter" alt="Vertically Centered">
                     <option value="false">false</option>
                     <option value="true">true</option>
                 </select>
 
-                <label for="multiline">Multiline</label>
+                <label for="multiline" data-i18n="multiline">Multiline</label>
                 <select class="param" id="multiline" name="multiline" alt="Multiline">
-                    <option value="false">Type sentences on one line</option>
-                    <option value="true">Each sentence on a new line</option>
+                    <option value="false" data-i18n="multiline.type.single">Type sentences on one line</option>
+                    <option value="true" data-i18n="multiline.type.multi">Each sentence on a new line</option>
                 </select>
 
-                <label for="repeat">Repeat</label>
+                <label for="repeat" data-i18n="repeat">Repeat</label>
                 <select class="param" id="repeat" name="repeat" alt="Repeat">
                     <option value="true">true</option>
                     <option value="false">false</option>
                 </select>
 
-                <label for="random">Random</label>
+                <label for="random" data-i18n="random">Random</label>
                 <select class="param" id="random" name="random" alt="Random">
                     <option value="false">false</option>
                     <option value="true">true</option>
                 </select>
 
-                <label for="dimensions" title="Width ✕ Height">Width ✕ Height</label>
+                <label for="dimensions" data-i18n="dimensions" title="Width ✕ Height">Width ✕ Height</label>
                 <span id="dimensions">
                     <input class="param inline" type="number" id="width" name="width" alt="Width (px)" placeholder="435" value="435">
                     <label>✕</label>
                     <input class="param inline" type="number" id="height" name="height" alt="Height (px)" placeholder="50" value="50">
                 </span>
 
-                <input type="button" class="btn" value="Reset" onclick="preview.reset();">
+                <input type="button" class="btn" value="Reset" onclick="preview.reset();" data-i18n-value="reset">
 
-                <button type="button" class="copy-button btn tooltip" onclick="clipboard.copyPermalink(this);" onmouseout="tooltip.reset(this);" disabled>Copy Permalink</button>
+                <button type="button" class="copy-button btn tooltip" onclick="clipboard.copyPermalink(this);" onmouseout="tooltip.reset(this);" disabled data-i18n="copyPermalink">Copy Permalink</button>
             </form>
         </div>
 
         <div class="output top-bottom-split">
             <div class="top">
-                <h2>Preview</h2>
+                <h2 data-i18n="preview">Preview</h2>
 
                 <img alt="Readme Typing SVG" src="/?lines=The+five+boxing+wizards+jump+quickly" onload="this.classList.remove('loading')" onerror="this.classList.remove('loading')" />
-                <div class="loader">Loading...</div>
+                <div class="loader" data-i18n="loading">Loading...</div>
 
                 <label class="show-border">
                     <input type="checkbox">
-                    Show border
+                    <span data-i18n="showBorder">Show border</span>
                 </label>
 
                 <div>
-                    <h2>Markdown</h2>
+                    <h2 data-i18n="markdown">Markdown</h2>
                     <div class="code-container md">
                         <code></code>
                     </div>
 
-                    <button class="copy-button btn tooltip" onclick="clipboard.copyCode(this);" onmouseout="tooltip.reset(this);" disabled>
+                    <button class="copy-button btn tooltip" onclick="clipboard.copyCode(this);" onmouseout="tooltip.reset(this);" disabled data-i18n="markdown.copy">
                         Copy To Clipboard
                     </button>
                 </div>
 
                 <div>
-                    <h2>HTML</h2>
+                    <h2 data-i18n="html">HTML</h2>
                     <div class="code-container html">
                         <code></code>
                     </div>
 
-                    <button class="copy-button btn tooltip" onclick="clipboard.copyCode(this);" onmouseout="tooltip.reset(this);" disabled>
+                    <button class="copy-button btn tooltip" onclick="clipboard.copyCode(this);" onmouseout="tooltip.reset(this);" disabled data-i18n="markdown.copy">
                         Copy To Clipboard
                     </button>
                 </div>
             </div>
             <div class="bottom">
                 <a href="https://github.com/DenverCoder1/readme-typing-svg/blob/main/docs/faq.md" target="_blank" class="underline-hover faq">
-                    Frequently Asked Questions
+                    <span data-i18n="faq">Frequently Asked Questions</span>
                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path fill="none" d="M0 0h24v24H0z"></path>
