@@ -4,7 +4,35 @@
   const DEFAULT_LANG = "en";
   const messages = window.I18n || {};
 
-  let currentLang = localStorage.getItem(LANG_KEY) || DEFAULT_LANG;
+  // Safe localStorage access (may throw in private/restricted contexts)
+  const store = {
+    get(key) {
+      try {
+        return localStorage.getItem(key);
+      } catch (e) {
+        return null;
+      }
+    },
+    set(key, value) {
+      try {
+        localStorage.setItem(key, value);
+      } catch (e) {
+        /* ignore write failures */
+      }
+    },
+  };
+
+  /**
+   * Detect the system/browser language and map it to a supported lang code.
+   * Priority: zh* -> zh-CN, otherwise default to en.
+   */
+  function detectSystemLang() {
+    const lang = (navigator.language || navigator.userLanguage || "").toLowerCase();
+    return lang.startsWith("zh") ? "zh-CN" : DEFAULT_LANG;
+  }
+
+  // User's explicit choice takes precedence; otherwise follow the system language.
+  let currentLang = store.get(LANG_KEY) || detectSystemLang();
   if (!messages[currentLang]) currentLang = DEFAULT_LANG;
 
   const i18n = {
@@ -23,7 +51,7 @@
     setLang(code, reApply = true) {
       if (!messages[code]) code = DEFAULT_LANG;
       currentLang = code;
-      localStorage.setItem(LANG_KEY, code);
+      store.set(LANG_KEY, code);
       if (reApply) i18n.apply();
       // notify subscribers (e.g. dynamic line labels) after re-render
       this._onChange && this._onChange(currentLang);
