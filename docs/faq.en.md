@@ -7,14 +7,14 @@ Markdown files on GitHub support embedded images using Markdown or HTML. You can
 ### Markdown
 
 ```md
-[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text)](https://github.com/Dominic-KK/readme-typing-svg)
 ```
 
 ### HTML
 
 <!-- prettier-ignore-start -->
 ```html
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text"/></a>
+<a href="https://github.com/Dominic-KK/readme-typing-svg"><img src="https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text"/></a>
 ```
 <!-- prettier-ignore-end -->
 
@@ -35,7 +35,7 @@ To center align images, you must use the HTML syntax and wrap it in an element w
 <!-- prettier-ignore-start -->
 ```html
 <p align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com/?lines=This+image+is+center-aligned&font=Fira%20Code&center=true&width=380&height=50"/></a>
+  <a href="https://github.com/Dominic-KK/readme-typing-svg"><img src="https://readme-typing-svg.demolab.com/?lines=This+image+is+center-aligned&font=Fira%20Code&center=true&width=380&height=50"/></a>
 </p>
 ```
 <!-- prettier-ignore-end -->

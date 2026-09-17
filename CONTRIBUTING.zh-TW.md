@@ -41,7 +41,7 @@ macOS 上的 PHP 通常內建 curl 擴充功能。如果需要啟用它，請確
 ### 克隆儲存庫
 
 ```
-git clone https://github.com/DenverCoder1/readme-typing-svg.git
+git clone https://github.com/Dominic-KK/readme-typing-svg.git
 cd readme-typing-svg
 ```
 

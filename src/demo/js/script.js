@@ -115,7 +115,7 @@ const preview = {
     // 生成链接和 markdown
     const imageURL = `${window.location.origin}?${query}`;
     const demoImageURL = `/?${query}`;
-    const repoLink = "https://git.io/typing-svg";
+    const repoLink = "https://github.com/Dominic-KK/readme-typing-svg";
     const md = `[![Typing SVG](${imageURL})](${repoLink})`;
     const html = `<a href="${repoLink}"><img src="${imageURL}" alt="Typing SVG" /></a>`;
     // 若没有变化则不更新
@@ -368,6 +368,12 @@ document.addEventListener("click", () => preview.update(), false);
 // 并刷新仍显示上一语言示例文本的行
 if (window.i18n) {
   window.i18n.onChange(() => {
+    // 根据语言切换 FAQ 链接指向的版本文档
+    const faqLink = document.getElementById("faq-link");
+    if (faqLink) {
+      const suffix = window.i18n.lang() === "zh-TW" ? ".zh-TW" : window.i18n.lang() === "en" ? ".en" : "";
+      faqLink.href = `https://github.com/Dominic-KK/readme-typing-svg/blob/main/docs/faq${suffix}.md`;
+    }
     const dummy = preview.getDummyText();
     // 若字体仍是默认字体，则切换到语言相关的默认字体
     const fontEl = document.getElementById("font");

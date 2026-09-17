@@ -22,7 +22,7 @@
 3. Adjust the width parameter (see below) to fit the full width of your text.
 
 ```md
-[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text)](https://github.com/Dominic-KK/readme-typing-svg)
 ```
 
 4. Star the repo 😄
@@ -39,7 +39,7 @@ Here you can easily customize your Typing SVG with a live preview.
 
 Below are links to profiles where you can see Readme Typing SVGs in action!
 
-[![Jonah Lawrence](https://github.com/DenverCoder1.png?size=60)](https://github.com/DenverCoder1 "Jonah Lawrence on GitHub")
+[![Jonah Lawrence](https://github.com/Dominic-KK.png?size=60)](https://github.com/Dominic-KK "Jonah Lawrence on GitHub")
 [![Jini by Rentalz.com](https://i.imgur.com/TtuoKCs.png)](https://jini.rentalz.com/ "Jini by Rentalz.com")
 [![8BitJonny](https://github.com/8BitJonny.png?size=60)](https://github.com/8BitJonny "8BitJonny on GitHub")
 [![Aditya Raute](https://github.com/adityaraute.png?size=60)](https://github.com/adityaraute "Aditya Raute on GitHub")
@@ -119,7 +119,7 @@ Below are links to profiles where you can see Readme Typing SVGs in action!
 [![Harry Skerritt](https://github.com/user-attachments/assets/392d404f-b0af-4fab-b4f7-120a36ffc3f4)](https://github.com/Harry-Skerritt "Harry-Skerritt on Github")
 [![Ahmed Nassar](https://github.com/AhmedNassar7.png?size=60)](https://github.com/AhmedNassar7 "Ahmed Nassar on Github")
 
-Feel free to [open a PR](https://github.com/DenverCoder1/readme-typing-svg/issues/21#issue-870549556) and add yours!
+Feel free to [open a PR](https://github.com/Dominic-KK/readme-typing-svg/issues/21#issue-870549556) and add yours!
 
 ## 🔧 Options
 
@@ -154,7 +154,7 @@ You can deploy the PHP files on any website server with PHP installed or as a He
 1. Sign in to **Heroku** or create a new account at <https://heroku.com>
 2. Click the "Deploy to Heroku" button below
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg "Deploy to Heroku")](https://heroku.com/deploy?template=https://github.com/DenverCoder1/readme-typing-svg/tree/main)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg "Deploy to Heroku")](https://heroku.com/deploy?template=https://github.com/Dominic-KK/readme-typing-svg/tree/main)
 
 3. On the page that comes up, click **"Deploy App"** at the end of the form
 4. Once the app is deployed, click **"Manage App"** to go to the dashboard
@@ -175,7 +175,7 @@ Refer to [CONTRIBUTING.md](/CONTRIBUTING.en.md) for more details on contributing
 <!-- markdownlint-disable MD033 -->
 <p align="left">
   <a href="https://www.youtube.com/channel/UCipSxT7a3rn81vGLw9lqRkg?sub_confirmation=1"><img alt="Youtube" title="Youtube" src="https://img.shields.io/badge/-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white"/></a>
-  <a href="https://github.com/sponsors/DenverCoder1"><img alt="Sponsor with Github" title="Sponsor with Github" src="https://img.shields.io/badge/-Sponsor-ea4aaa?style=for-the-badge&logo=github&logoColor=white"/></a>
+  <a href="https://github.com/sponsors/Dominic-KK"><img alt="Sponsor with Github" title="Sponsor with Github" src="https://img.shields.io/badge/-Sponsor-ea4aaa?style=for-the-badge&logo=github&logoColor=white"/></a>
 </p>
 <!-- markdownlint-enable MD033 -->
 

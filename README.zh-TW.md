@@ -22,7 +22,7 @@
 3. 調整 width 參數（見下文），使寬度能夠容納你文字的完整寬度。
 
 ```md
-[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text)](https://github.com/Dominic-KK/readme-typing-svg)
 ```
 
 4. 給這個儲存庫點個星星吧 😄
@@ -39,7 +39,7 @@
 
 下面是你可以看到 Readme Typing SVG 實際效果的使用者主頁連結！
 
-[![Jonah Lawrence](https://github.com/DenverCoder1.png?size=60)](https://github.com/DenverCoder1 "Jonah Lawrence 在 GitHub 上")
+[![Jonah Lawrence](https://github.com/Dominic-KK.png?size=60)](https://github.com/Dominic-KK "Jonah Lawrence 在 GitHub 上")
 [![Jini by Rentalz.com](https://i.imgur.com/TtuoKCs.png)](https://jini.rentalz.com/ "Jini by Rentalz.com")
 [![8BitJonny](https://github.com/8BitJonny.png?size=60)](https://github.com/8BitJonny "8BitJonny 在 GitHub 上")
 [![Aditya Raute](https://github.com/adityaraute.png?size=60)](https://github.com/adityaraute "Aditya Raute 在 GitHub 上")
@@ -119,7 +119,7 @@
 [![Harry Skerritt](https://github.com/user-attachments/assets/392d404f-b0af-4fab-b4f7-120a36ffc3f4)](https://github.com/Harry-Skerritt "Harry-Skerritt 在 GitHub 上")
 [![Ahmed Nassar](https://github.com/AhmedNassar7.png?size=60)](https://github.com/AhmedNassar7 "Ahmed Nassar 在 GitHub 上")
 
-歡迎[提交 Pull Request](https://github.com/DenverCoder1/readme-typing-svg/issues/21#issue-870549556)，把你的主頁加進去！
+歡迎[提交 Pull Request](https://github.com/Dominic-KK/readme-typing-svg/issues/21#issue-870549556)，把你的主頁加進去！
 
 ## 🔧 可設定選項
 
@@ -154,7 +154,7 @@
 1. 登入 **Heroku**，或前往 <https://heroku.com> 建立新帳號
 2. 點擊下方的 "Deploy to Heroku"（部屬到 Heroku）按鈕
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg "部屬到 Heroku")](https://heroku.com/deploy?template=https://github.com/DenverCoder1/readme-typing-svg/tree/main)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg "部屬到 Heroku")](https://heroku.com/deploy?template=https://github.com/Dominic-KK/readme-typing-svg/tree/main)
 
 3. 在出現的頁面上，點擊表單末尾的 **"Deploy App"**（部屬應用程式）
 4. 應用程式部屬完成後，點擊 **"Manage App"**（管理應用程式）進入儀表板（dashboard）
@@ -175,7 +175,7 @@
 <!-- markdownlint-disable MD033 -->
 <p align="left">
   <a href="https://www.youtube.com/channel/UCipSxT7a3rn81vGLw9lqRkg?sub_confirmation=1"><img alt="訂閱" title="訂閱" src="https://img.shields.io/badge/-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white"/></a>
-  <a href="https://github.com/sponsors/DenverCoder1"><img alt="在 GitHub 上贊助" title="在 GitHub 上贊助" src="https://img.shields.io/badge/-Sponsor-ea4aaa?style=for-the-badge&logo=github&logoColor=white"/></a>
+  <a href="https://github.com/sponsors/Dominic-KK"><img alt="在 GitHub 上贊助" title="在 GitHub 上贊助" src="https://img.shields.io/badge/-Sponsor-ea4aaa?style=for-the-badge&logo=github&logoColor=white"/></a>
 </p>
 <!-- markdownlint-enable MD033 -->
 

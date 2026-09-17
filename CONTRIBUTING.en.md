@@ -41,7 +41,7 @@ Install PHP from [XAMPP](https://www.apachefriends.org/index.html) or [php.net](
 ### Clone the repository
 
 ```
-git clone https://github.com/DenverCoder1/readme-typing-svg.git
+git clone https://github.com/Dominic-KK/readme-typing-svg.git
 cd readme-typing-svg
 ```
 

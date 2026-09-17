@@ -22,7 +22,7 @@
 3. 调整 width 参数（见下文），使宽度能够适配你文本的完整宽度。
 
 ```md
-[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text)](https://github.com/Dominic-KK/readme-typing-svg)
 ```
 
 4. 给这个仓库点个 Star 😄
@@ -39,7 +39,7 @@
 
 下面是你可以看到 Readme Typing SVG 实际效果的个人主页链接！
 
-[![Jonah Lawrence](https://github.com/DenverCoder1.png?size=60)](https://github.com/DenverCoder1 "Jonah Lawrence 在 GitHub 上")
+[![Jonah Lawrence](https://github.com/Dominic-KK.png?size=60)](https://github.com/Dominic-KK "Jonah Lawrence 在 GitHub 上")
 [![Jini by Rentalz.com](https://i.imgur.com/TtuoKCs.png)](https://jini.rentalz.com/ "Jini by Rentalz.com")
 [![8BitJonny](https://github.com/8BitJonny.png?size=60)](https://github.com/8BitJonny "8BitJonny 在 GitHub 上")
 [![Aditya Raute](https://github.com/adityaraute.png?size=60)](https://github.com/adityaraute "Aditya Raute 在 GitHub 上")
@@ -119,7 +119,7 @@
 [![Harry Skerritt](https://github.com/user-attachments/assets/392d404f-b0af-4fab-b4f7-120a36ffc3f4)](https://github.com/Harry-Skerritt "Harry-Skerritt 在 GitHub 上")
 [![Ahmed Nassar](https://github.com/AhmedNassar7.png?size=60)](https://github.com/AhmedNassar7 "Ahmed Nassar 在 GitHub 上")
 
-欢迎[提交 Pull Request](https://github.com/DenverCoder1/readme-typing-svg/issues/21#issue-870549556)，把你的主页加进去！
+欢迎[提交 Pull Request](https://github.com/Dominic-KK/readme-typing-svg/issues/21#issue-870549556)，把你的主页加进去！
 
 ## 🔧 可配置选项
 
@@ -154,7 +154,7 @@
 1. 登录 **Heroku**，或前往 <https://heroku.com> 创建新账号
 2. 点击下方的 "Deploy to Heroku"（部署到 Heroku）按钮
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg "部署到 Heroku")](https://heroku.com/deploy?template=https://github.com/DenverCoder1/readme-typing-svg/tree/main)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg "部署到 Heroku")](https://heroku.com/deploy?template=https://github.com/Dominic-KK/readme-typing-svg/tree/main)
 
 3. 在出现的页面上，点击表单末尾的 **"Deploy App"**（部署应用）
 4. 应用部署完成后，点击 **"Manage App"**（管理应用）进入仪表盘（dashboard）
@@ -175,7 +175,7 @@
 <!-- markdownlint-disable MD033 -->
 <p align="left">
   <a href="https://www.youtube.com/channel/UCipSxT7a3rn81vGLw9lqRkg?sub_confirmation=1"><img alt="订阅" title="订阅" src="https://img.shields.io/badge/-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white"/></a>
-  <a href="https://github.com/sponsors/DenverCoder1"><img alt="在 GitHub 上赞助" title="在 GitHub 上赞助" src="https://img.shields.io/badge/-Sponsor-ea4aaa?style=for-the-badge&logo=github&logoColor=white"/></a>
+  <a href="https://github.com/sponsors/Dominic-KK"><img alt="在 GitHub 上赞助" title="在 GitHub 上赞助" src="https://img.shields.io/badge/-Sponsor-ea4aaa?style=for-the-badge&logo=github&logoColor=white"/></a>
 </p>
 <!-- markdownlint-enable MD033 -->
 

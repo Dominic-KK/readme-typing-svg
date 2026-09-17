@@ -41,7 +41,7 @@ macOS 上的 PHP 通常自带 curl 扩展。如果需要启用它，请确保 `p
 ### 克隆仓库
 
 ```
-git clone https://github.com/DenverCoder1/readme-typing-svg.git
+git clone https://github.com/Dominic-KK/readme-typing-svg.git
 cd readme-typing-svg
 ```
 

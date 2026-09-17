@@ -1,4 +1,4 @@
-<!-- 用于渲染打字 SVG 的模板，参考：https://github.com/DenverCoder1/readme-typing-svg/ -->
+<!-- 用于渲染打字 SVG 的模板，参考：https://github.com/Dominic-KK/readme-typing-svg/ -->
 <svg xmlns='http://www.w3.org/2000/svg'
     xmlns:xlink='http://www.w3.org/1999/xlink'
     viewBox='0 0 400 50'

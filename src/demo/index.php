@@ -48,11 +48,11 @@
     <!-- GitHub 徽章/链接区块 -->
     <div class="github">
         <!-- GitHub Sponsors（赞助） -->
-        <a class="github-button" href="https://github.com/sponsors/denvercoder1" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-heart" data-size="large" aria-label="Sponsor @denvercoder1 on GitHub">Sponsor</a>
+        <a class="github-button" href="https://github.com/sponsors/Dominic-KK" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-heart" data-size="large" aria-label="Sponsor @Dominic-KK on GitHub">Sponsor</a>
         <!-- 在 GitHub 上查看 -->
-        <a class="github-button" href="https://github.com/denvercoder1/readme-typing-svg" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="View denvercoder1/readme-typing-svg on GitHub">View on GitHub</a>
+        <a class="github-button" href="https://github.com/Dominic-KK/readme-typing-svg" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="View Dominic-KK/readme-typing-svg on GitHub">View on GitHub</a>
         <!-- GitHub Star（加星） -->
-        <a class="github-button" href="https://github.com/denvercoder1/readme-typing-svg" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star denvercoder1/readme-typing-svg on GitHub">Star</a>
+        <a class="github-button" href="https://github.com/Dominic-KK/readme-typing-svg" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star Dominic-KK/readme-typing-svg on GitHub">Star</a>
     </div>
 
     <div class="container">
@@ -205,7 +205,7 @@
                 </div>
             </div>
             <div class="bottom">
-                <a href="https://github.com/DenverCoder1/readme-typing-svg/blob/main/docs/faq.md" target="_blank" class="underline-hover faq">
+                <a href="https://github.com/Dominic-KK/readme-typing-svg/blob/main/docs/faq.md" target="_blank" class="underline-hover faq" id="faq-link">
                     <span data-i18n="faq">Frequently Asked Questions</span>
                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                         <g>
