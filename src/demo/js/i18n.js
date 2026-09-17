@@ -24,11 +24,14 @@
 
   /**
    * Detect the system/browser language and map it to a supported lang code.
-   * Priority: zh* -> zh-CN, otherwise default to en.
+   * Priority: zh-TW / zh-HK / zh-Hant -> zh-TW; other zh* -> zh-CN; otherwise en.
    */
   function detectSystemLang() {
-    const lang = (navigator.language || navigator.userLanguage || "").toLowerCase();
-    return lang.startsWith("zh") ? "zh-CN" : DEFAULT_LANG;
+    const raw = navigator.language || navigator.userLanguage || "";
+    const lang = raw.toLowerCase();
+    if (/^zh-(tw|hk|mo)/.test(lang) || lang.includes("hant")) return "zh-TW";
+    if (lang.startsWith("zh")) return "zh-CN";
+    return DEFAULT_LANG;
   }
 
   // User's explicit choice takes precedence; otherwise follow the system language.

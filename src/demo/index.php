@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="./css/toggle-dark.css">
     <script type="text/javascript" src="./i18n/en.js" defer></script>
     <script type="text/javascript" src="./i18n/zh-CN.js" defer></script>
+    <script type="text/javascript" src="./i18n/zh-TW.js" defer></script>
     <script type="text/javascript" src="./js/i18n.js" defer></script>
     <script type="text/javascript" src="./js/script.js" defer></script>
     <script type="text/javascript" src="./js/toggle-dark.js" defer></script>
@@ -40,6 +41,7 @@
         <select id="lang-select" onchange="window.i18n.setLang(this.value)">
             <option value="en">English</option>
             <option value="zh-CN">简体中文</option>
+            <option value="zh-TW">繁體中文</option>
         </select>
     </div>
 
