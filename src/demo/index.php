@@ -16,7 +16,7 @@
         gtag('js', new Date());
         gtag('config', 'G-48CYVH0XEF');
     </script>
-    <title>Readme Typing SVG - Demo Site</title>
+    <title>⌨️ Readme Typing SVG | 🌹Dominic🌹</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
     <link rel="stylesheet" href="./css/style.css">
@@ -33,7 +33,7 @@
 </head>
 
 <body <?= isset($_COOKIE["darkmode"]) && $_COOKIE["darkmode"] == "on" ? 'data-theme="dark"' : "" ?>>
-    <h1 data-i18n="demo.heading">⌨️ Readme Typing SVG</h1>
+    <h1 data-i18n="demo.heading">⌨️ Readme Typing SVG | 🌹Dominic🌹</h1>
 
     <!-- Language switcher -->
     <div class="lang-switch">
@@ -150,7 +150,7 @@
             <div class="top">
                 <h2 data-i18n="preview">Preview</h2>
 
-                <img alt="Readme Typing SVG" src="/?lines=The+five+boxing+wizards+jump+quickly" onload="this.classList.remove('loading')" onerror="this.classList.remove('loading')" />
+                <img alt="Dominic" src="/?lines=The+five+boxing+wizards+jump+quickly" onload="this.classList.remove('loading')" onerror="this.classList.remove('loading')" />
                 <div class="loader" data-i18n="loading">Loading...</div>
 
                 <label class="show-border">

@@ -1,8 +1,8 @@
-// English translations for the Readme Typing SVG demo
+// English translations for the Readme Typing SVG - Dominic site
 window.I18n = window.I18n || {};
 window.I18n["en"] = {
-  "demo.title": "Readme Typing SVG - Demo Site",
-  "demo.heading": "⌨️ Readme Typing SVG",
+  "demo.title": "⌨️ Readme Typing SVG | 🌹Dominic🌹",
+  "demo.heading": "⌨️ Readme Typing SVG | 🌹Dominic🌹",
   "add.text": "Add your text",
   "add.line": "+ Add line",
   "options": "Options",
@@ -36,6 +36,15 @@ window.I18n["en"] = {
   "faq": "Frequently Asked Questions",
   "line": "Line {n}",
   "line.placeholder": "Enter text here",
+  "lines.dummy": [
+    "The five boxing wizards jump quickly",
+    "How vexingly quick daft zebras jump",
+    "Quick fox jumps nightly above wizard",
+    "Sphinx of black quartz, judge my vow",
+    "Waltz, bad nymph, for quick jigs vex",
+    "Glib jocks quiz nymph to vex dwarf",
+    "Jived fox nymph grabs quick waltz",
+  ],
   "copied": "Copied!",
   "markdown.copy": "Copy To Clipboard",
 };

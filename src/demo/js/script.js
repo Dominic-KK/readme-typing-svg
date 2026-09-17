@@ -24,8 +24,8 @@ const preview = {
     pause: "1000",
     width: "435",
   },
-  // dummy text for default line values
-  dummyText: [
+  // fallback dummy text for default line values
+  _fallbackDummyText: [
     "The five boxing wizards jump quickly",
     "How vexingly quick daft zebras jump",
     "Quick fox jumps nightly above wizard",
@@ -34,6 +34,16 @@ const preview = {
     "Glib jocks quiz nymph to vex dwarf",
     "Jived fox nymph grabs quick waltz",
   ],
+
+  /**
+   * Get the dummy text for the current language
+   * @returns {array<string>} A list of sample lines for the current language
+   */
+  getDummyText() {
+    const dict = window.I18n && window.I18n[window.i18n.lang()];
+    const list = dict && dict["lines.dummy"];
+    return Array.isArray(list) && list.length ? list : this._fallbackDummyText;
+  },
 
   /**
    * Get the current parameters from the form
@@ -156,7 +166,7 @@ const preview = {
       input.id = `line-${index}`;
       input.name = `line-${index}`;
       input.placeholder = placeholder;
-      input.value = this.dummyText[(index - 1) % this.dummyText.length];
+      input.value = this.getDummyText()[(index - 1) % this.getDummyText().length];
       input.dataset.index = index;
       // removal button
       const deleteButton = document.createElement("button");
@@ -253,7 +263,7 @@ const preview = {
     const params = this.getParams();
     // convert parameters to query string
     const defaultInputs = { ...this.defaults, ...this.overrides };
-    defaultInputs.lines = this.dummyText[0];
+    defaultInputs.lines = this.getDummyText()[0];
     const query = Object.keys(params)
       .filter((key) => params[key] !== defaultInputs[key]) // skip if default value
       .map((key) => this.customEncode(key) + "=" + this.customEncode(params[key])) // encode keys and values
@@ -289,7 +299,7 @@ const preview = {
       }
     });
     // add lines
-    const lines = params.lines || this.dummyText[0];
+    const lines = params.lines || this.getDummyText()[0];
     const lineInputs = lines.split(params.separator);
     this.addLines(lineInputs.length);
     lineInputs.forEach((line, index) => {
@@ -344,11 +354,30 @@ document.addEventListener("keyup", () => preview.update(), false);
 document.addEventListener("click", () => preview.update(), false);
 
 // when the language changes, re-label the dynamically added line inputs
+// and refresh any lines that still show the previous language's sample text
 if (window.i18n) {
   window.i18n.onChange(() => {
+    const dummy = preview.getDummyText();
     document.querySelectorAll(".lines label[data-index]").forEach((label) => {
       const n = Number(label.dataset.index);
       label.innerText = window.i18n.t("line", { n });
+    });
+    document.querySelectorAll(".lines input[data-index]").forEach((input) => {
+      const i = Number(input.dataset.index) - 1;
+      // replace a line that is still showing any language's sample text
+      let isSample = preview._fallbackDummyText.includes(input.value);
+      if (!isSample && window.I18n) {
+        for (const lang in window.I18n) {
+          const list = window.I18n[lang]["lines.dummy"];
+          if (Array.isArray(list) && list.includes(input.value)) {
+            isSample = true;
+            break;
+          }
+        }
+      }
+      if (isSample) {
+        input.value = dummy[i % dummy.length];
+      }
     });
   });
 }

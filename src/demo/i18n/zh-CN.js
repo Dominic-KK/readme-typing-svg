@@ -1,8 +1,8 @@
-// 简体中文翻译 - Readme Typing SVG 演示站
+// 简体中文翻译 - Readme Typing SVG - Dominic 站点
 window.I18n = window.I18n || {};
 window.I18n["zh-CN"] = {
-  "demo.title": "Readme Typing SVG - 演示站点",
-  "demo.heading": "⌨️ Readme Typing SVG",
+  "demo.title": "⌨️ Readme Typing SVG | 🌹Dominic🌹",
+  "demo.heading": "⌨️ Readme Typing SVG | 🌹Dominic🌹",
   "add.text": "添加你的文字",
   "add.line": "+ 添加一行",
   "options": "选项",
@@ -36,6 +36,15 @@ window.I18n["zh-CN"] = {
   "faq": "常见问题",
   "line": "第 {n} 行",
   "line.placeholder": "在此输入文字",
+  "lines.dummy": [
+    "今天也要元气满满地敲代码哦",
+    "莫烦躁，Bug 终会被你驯服",
+    "每一个深夜都有敲击的声响",
+    "风里来雨里去，代码会记得你",
+    "改完这行就去喝一杯热咖啡",
+    "代码不止眼前的 A 和 B",
+    "愿你的每一次提交都顺顺利利",
+  ],
   "copied": "已复制！",
   "markdown.copy": "复制到剪贴板",
 };
