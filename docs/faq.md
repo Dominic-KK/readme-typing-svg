@@ -1,8 +1,8 @@
-# FAQ
+# 常见问题（FAQ）
 
-## How do I include Readme Typing SVG in my Readme?
+## 如何在我的 Readme 中包含 Readme Typing SVG？
 
-Markdown files on GitHub support embedded images using Markdown or HTML. You can customize your SVG on the [demo site](https://readme-typing-svg.demolab.com/demo/) and use the image source in either of the following ways:
+GitHub 上的 Markdown 文件支持使用 Markdown 或 HTML 嵌入图片。你可以在[演示站点](https://readme-typing-svg.demolab.com/demo/)上定制你的 SVG，并通过以下任意方式使用图片源：
 
 ### Markdown
 
@@ -18,19 +18,19 @@ Markdown files on GitHub support embedded images using Markdown or HTML. You can
 ```
 <!-- prettier-ignore-end -->
 
-## The text is getting cut off at the end, how do I fix it?
+## 文字在末尾被截断了，怎么修复？
 
-The text rendered within the SVG can be any variable width, therefore you must specify the width manually to ensure the text will fit.
+SVG 内渲染的文字宽度是可变的，因此你必须手动指定宽度，以确保文字能够完整显示。
 
-The `width` parameter in the URL should be increased such that the full width of the text is displayed properly.
+应该增大 URL 中的 `width` 参数，使文字能以完整宽度正确显示。
 
 ```md
 https://readme-typing-svg.demolab.com/?lines=Your+Long+Message+With+A+Long+Width&width=460
 ```
 
-## How do I center the image on the page?
+## 如何在页面上居中显示图片？
 
-To center align images, you must use the HTML syntax and wrap it in an element with the HTML attribute `align="center"`.
+要实现图片居中，你需要使用 HTML 语法，并将其包裹在带有 HTML 属性 `align="center"` 的元素中。
 
 <!-- prettier-ignore-start -->
 ```html
@@ -40,15 +40,15 @@ To center align images, you must use the HTML syntax and wrap it in an element w
 ```
 <!-- prettier-ignore-end -->
 
-## How do I add multiple spaces in the middle of a line?
+## 如何在一行中间添加多个空格？
 
-Similar to HTML, SVG/XML treats multiple consecutive spaces as a single space.
+与 HTML 类似，SVG/XML 会将多个连续空格视为单个空格。
 
-A workaround for adding extra spaces can be to use other whitespace characters (for example, you can copy-paste the en-space or other unusual spaces from https://qwerty.dev/whitespace). The alternate whitespace characters don't get ignored.
+一种添加额外空格的变通方法是使用其他空白字符（例如，你可以从 https://qwerty.dev/whitespace 复制粘贴半角空格（en-space）或其他不常见的空格）。这些替代的空白字符不会被忽略。
 
-## How do I make different SVGs for dark mode and light mode?
+## 如何为深色模式和浅色模式制作不同的 SVG？
 
-As of May 2022, you can now [specify theme context](https://github.blog/changelog/2022-05-19-specify-theme-context-for-images-in-markdown-beta/) using the `<picture>` and `<source>` elements as shown below. The dark mode version appears in the `srcset` of the `<source>` tag and the light mode version appears in the `src` of the `<img>` tag.
+自 2022 年 5 月起，你可以使用 `<picture>` 和 `<source>` 元素来[指定主题上下文](https://github.blog/changelog/2022-05-19-specify-theme-context-for-images-in-markdown-beta/)，如下所示。深色模式版本出现在 `<source>` 标签的 `srcset` 中，浅色模式版本出现在 `<img>` 标签的 `src` 中。
 
 <!-- prettier-ignore-start -->
 ```html
@@ -59,6 +59,6 @@ As of May 2022, you can now [specify theme context](https://github.blog/changelo
 ```
 <!-- prettier-ignore-end -->
 
-## How do I create a Readme for my profile?
+## 如何为我的个人主页创建 Readme？
 
-A profile readme appears on your profile page when you create a repository with the same name as your username and add a `README.md` file to it. For example, the repository for the user [`DenverCoder1`](https://github.com/DenverCoder1) is located at [`DenverCoder1/DenverCoder1`](https://github.com/DenverCoder1/DenverCoder1).
+当你创建一个与你的用户名同名的仓库，并向其中添加一个 `README.md` 文件时，该个人主页 readme 就会显示在你的个人主页页面上。例如，用户 [`DenverCoder1`](https://github.com/DenverCoder1) 的仓库位于 [`DenverCoder1/DenverCoder1`](https://github.com/DenverCoder1/DenverCoder1)。

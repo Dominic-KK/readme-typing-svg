@@ -1,19 +1,19 @@
-## Summary
+## 摘要（Summary）
 
-<!-- Please include a summary of the change and which issue is fixed. -->
+<!-- 请在此处包含变更的摘要以及修复的 Issue。 -->
 
-## Type of change
+## 变更类型（Type of change）
 
-<!-- Please delete options that are not relevant. -->
+<!-- 请删除不相关的选项。 -->
 
-- [ ] Bug fix (added a non-breaking change which fixes an issue)
-- [ ] New feature (added a non-breaking change which adds functionality)
-- [ ] Updated documentation (updated the readme, templates, or other repo files)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] 缺陷修复（进行了不破坏现有功能、可修复问题的非破坏性更改）
+- [ ] 新功能（进行了添加功能、不破坏现有功能的非破坏性更改）
+- [ ] 更新文档（更新了 README、模板或其他仓库文件）
+- [ ] 破坏性更改（会导致现有功能无法按预期运行的修复或功能）
 
-## How Has This Been Tested?
+## 如何测试的？（How Has This Been Tested?）
 
-<!-- If you have changed or added a feature, please describe the tests you made to verify your changes. -->
+<!-- 如果你更改或添加了功能，请描述你为验证这些更改而进行的测试。 -->
 
-- [ ] Ran tests with `composer test`
-- [ ] Added or updated test cases to test new features
+- [ ] 使用 `composer test` 运行了测试
+- [ ] 添加或更新了用于测试新功能的测试用例

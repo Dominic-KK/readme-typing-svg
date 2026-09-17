@@ -4,40 +4,40 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?lines=Type+messages+everywhere!;Add+a+bio+to+your+profile!;Add+a+description+to+your+repo!;Make+your+readme+stand+out!&font=Fira%20Code&center=true&width=380&height=50&duration=4000&pause=1000" alt="使用示例 - README Typing SVG">
+  <img src="https://readme-typing-svg.demolab.com/?lines=Type+messages+everywhere!;Add+a+bio+to+your+profile!;Add+a+description+to+your+repo!;Make+your+readme+stand+out!&font=Fira%20Code&center=true&width=380&height=50&duration=4000&pause=1000" alt="使用範例 - README Typing SVG">
 </p>
 
 <p align="center">
-  <a href="https://github.com/search?q=extension%3Amd+%22https+readme+typing+svg%22&type=Code" alt="用户" title="使用本仓库的用户">
+  <a href="https://github.com/search?q=extension%3Amd+%22https+readme+typing+svg%22&type=Code" alt="使用者" title="使用本儲存庫的使用者">
     <img src="https://www.pokegoplaces.com/github/github-search-results/readme-typing-svg/index.php"/></a>
-  <a href="https://discord.gg/fPrdqh3Zfu" alt="Discord" title="Dev Pro Tips 讨论与支持服务器">
+  <a href="https://discord.gg/fPrdqh3Zfu" alt="Discord" title="Dev Pro Tips 討論與支援伺服器">
     <img src="https://img.shields.io/discord/819650821314052106?color=7289DA&logo=discord&logoColor=white&style=for-the-badge"/></a>
 </p>
 <!-- markdownlint-enable MD033 -->
 
-## ⚡ 快速开始
+## ⚡ 快速開始
 
-1. 将下面的 markdown 复制粘贴到你的 GitHub 个人主页 README 中
-2. 将 `?lines=` 后面的值替换为你的文本。用分号分隔多行文本，用 `+` 或 `%20` 表示空格。
-3. 调整 width 参数（见下文），使宽度能够适配你文本的完整宽度。
+1. 將下面的 markdown 複製貼上到你的 GitHub 個人主頁 README 中
+2. 將 `?lines=` 後面的值替換為你的文字。用分號分隔多行文字，用 `+` 或 `%20` 表示空格。
+3. 調整 width 參數（見下文），使寬度能夠容納你文字的完整寬度。
 
 ```md
 [![Typing SVG](https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text)](https://git.io/typing-svg)
 ```
 
-4. 给这个仓库点个 Star 😄
+4. 給這個儲存庫點個星星吧 😄
 
-## ⚙ 演示站点
+## ⚙ 示範網站
 
-你可以在这里通过实时预览轻松定制你的 Typing SVG。
+你可以在這裡透過即時預覽輕鬆自訂你的 Typing SVG。
 
 <https://readme-typing-svg.demolab.com/demo/>
 
-[![演示站点](https://user-images.githubusercontent.com/20955511/183703055-42ec8754-d84c-414f-8132-a02974224aa1.gif "演示站点")](https://readme-typing-svg.demolab.com/demo/)
+[![示範網站](https://user-images.githubusercontent.com/20955511/183703055-42ec8754-d84c-414f-8132-a02974224aa1.gif "示範網站")](https://readme-typing-svg.demolab.com/demo/)
 
-## 🚀 使用示例
+## 🚀 使用範例
 
-下面是你可以看到 Readme Typing SVG 实际效果的个人主页链接！
+下面是你可以看到 Readme Typing SVG 實際效果的使用者主頁連結！
 
 [![Jonah Lawrence](https://github.com/DenverCoder1.png?size=60)](https://github.com/DenverCoder1 "Jonah Lawrence 在 GitHub 上")
 [![Jini by Rentalz.com](https://i.imgur.com/TtuoKCs.png)](https://jini.rentalz.com/ "Jini by Rentalz.com")
@@ -119,76 +119,76 @@
 [![Harry Skerritt](https://github.com/user-attachments/assets/392d404f-b0af-4fab-b4f7-120a36ffc3f4)](https://github.com/Harry-Skerritt "Harry-Skerritt 在 GitHub 上")
 [![Ahmed Nassar](https://github.com/AhmedNassar7.png?size=60)](https://github.com/AhmedNassar7 "Ahmed Nassar 在 GitHub 上")
 
-欢迎[提交 Pull Request](https://github.com/DenverCoder1/readme-typing-svg/issues/21#issue-870549556)，把你的主页加进去！
+歡迎[提交 Pull Request](https://github.com/DenverCoder1/readme-typing-svg/issues/21#issue-870549556)，把你的主頁加進去！
 
-## 🔧 可配置选项
+## 🔧 可設定選項
 
-|        参数         |                                     详细说明                                     |   类型   |                                                                 示例                                                                 |
-| :-----------------: | :------------------------------------------------------------------------------: | :------: | :----------------------------------------------------------------------------------------------------------------------------------: |
-|     `lines`         |        要显示的文本，用 `;` 分隔多行，用 `+` 表示空格                           | string  |                                    `First+line;Second+line;Third+line`                                                             |
-|     `height`        |              输出 SVG 的高度（像素），默认：`50`                                | integer |                                                                任意正数                                                                |
-|     `width`         |              输出 SVG 的宽度（像素），默认：`400`                                | integer |                                                                任意正数                                                                |
-|     `size`          |                    字号（像素），默认：`20`                                      | integer |                                                                任意正数                                                                |
-|     `font`          |                字体族（font family），默认：`monospace`                          | string  |                                                        任何 Google Fonts 字体                                                        |
-|     `color`         |                  文字颜色，默认：`36BCF7`                                        | string  |                                         不带 `#` 的十六进制颜色码（例如 `F724A9`）                                                 |
-|  `background`       |                文字背景色，默认：`00000000`                                      | string  |                                         不带 `#` 的十六进制颜色码（例如 `FEFF4C`）                                                 |
-|     `center`        |      `true` 居中，`false` 左对齐，默认：`false`                                  | boolean |                                                                  `true` 或 `false`                                                   |
-|    `vCenter`        |  `true` 垂直居中，`false`（默认）为在中心线以上对齐                              | boolean |                                                                  `true` 或 `false`                                                   |
-|   `multiline`       |  `true` 自动换行，`false` 则在同一行重新打一遍，默认：`false`                    | boolean |                                                                  `true` 或 `false`                                                   |
-|   `duration`        |         打印单行文本的时长（毫秒），默认：`5000`                                 | integer |                                                                任意正数                                                                |
-|     `pause`         |        各行之间的暂停时长（毫秒），默认：`0`                                     | integer |                                                                任意非负数                                                               |
-|    `repeat`         |  `true` 播放到最后一行的循环回第一行，默认：`true`                               | boolean |                                                                  `true` 或 `false`                                                   |
-|   `separator`       |       `lines` 参数中所用的行分隔符，默认：`;`                                    | string  |                                                             `;`、`;;`、`/` 等                                                       |
-| `letterSpacing`     |                字符间距，默认：`normal`                                          | string  | [letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing) 属性所支持的任何 CSS 值                            |
+|        參數         |                                     詳細說明                                     |   型別   |                                                                  範例                                                                  |
+| :-----------------: | :------------------------------------------------------------------------------: | :------: | :------------------------------------------------------------------------------------------------------------------------------------: |
+|     `lines`         |            要顯示的文字，用 `;` 分隔多行，用 `+` 表示空格                        | string   |                                     `First+line;Second+line;Third+line`                                                               |
+|     `height`        |              輸出 SVG 的高度（像素），預設：`50`                                 | integer  |                                                                 任意正數                                                                |
+|     `width`         |              輸出 SVG 的寬度（像素），預設：`400`                                | integer  |                                                                 任意正數                                                                |
+|     `size`          |                     字號（像素），預設：`20`                                     | integer  |                                                                 任意正數                                                                |
+|     `font`          |              字型（font family），預設：`monospace`                              | string   |                                                          任何 Google Fonts 字型                                                         |
+|     `color`         |                    文字顏色，預設：`36BCF7`                                      | string   |                                         不帶 `#` 的十六進位色碼（例如 `F724A9`）                                                     |
+|  `background`       |                   文字背景色，預設：`00000000`                                   | string   |                                         不帶 `#` 的十六進位色碼（例如 `FEFF4C`）                                                     |
+|     `center`        |        `true` 置中，`false` 靠左對齊，預設：`false`                              | boolean  |                                                                 `true` 或 `false`                                                      |
+|    `vCenter`        |  `true` 垂直置中，`false`（預設）為在中心線以上對齊                             | boolean  |                                                                 `true` 或 `false`                                                      |
+|   `multiline`       |  `true` 自動換行，`false` 則在同一行重新打一遍，預設：`false`                    | boolean  |                                                                 `true` 或 `false`                                                      |
+|   `duration`        |         列印單行文字的時長（毫秒），預設：`5000`                                 | integer  |                                                                 任意正數                                                                |
+|     `pause`         |        各行之間的暫停時長（毫秒），預設：`0`                                     | integer  |                                                                 任意非負數                                                               |
+|    `repeat`         |  `true` 播完最後一行後循環回第一行，預設：`true`                                 | boolean  |                                                                 `true` 或 `false`                                                      |
+|   `separator`       |      `lines` 參數中所用的行分隔符號，預設：`;`                                   | string   |                                                             `;`、`;;`、`/` 等                                                         |
+| `letterSpacing`     |                  字元間距，預設：`normal`                                        | string   | [letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing) 屬性所支援的任何 CSS 值                              |
 
-## 📤 自行部署
+## 📤 自行部屬
 
-如果可以的话，建议将文件托管在你自己的服务器上。
+如果能力允許的話，建議將檔案託管在你自己的伺服器上。
 
-这样做可以获得更好的可用性（uptime），并且对定制有更多的控制权（你可以为你的用途修改代码）。
+這樣做可以獲得更好的可用性（uptime），並且對自訂有更多的掌控權（你可以為你的用途修改程式碼）。
 
-你可以在任何安装了 PHP 的网站服务器上部署这些 PHP 文件，也可以作为 Heroku 应用部署。
+你可以在任何安裝了 PHP 的網站伺服器上部屬這些 PHP 檔案，也可以作為 Heroku 應用程式部屬。
 
-### 部署到 Heroku 的逐步说明
+### 部屬到 Heroku 的逐步說明
 
-1. 登录 **Heroku**，或前往 <https://heroku.com> 创建新账号
-2. 点击下方的 "Deploy to Heroku"（部署到 Heroku）按钮
+1. 登入 **Heroku**，或前往 <https://heroku.com> 建立新帳號
+2. 點擊下方的 "Deploy to Heroku"（部屬到 Heroku）按鈕
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg "部署到 Heroku")](https://heroku.com/deploy?template=https://github.com/DenverCoder1/readme-typing-svg/tree/main)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg "部屬到 Heroku")](https://heroku.com/deploy?template=https://github.com/DenverCoder1/readme-typing-svg/tree/main)
 
-3. 在出现的页面上，点击表单末尾的 **"Deploy App"**（部署应用）
-4. 应用部署完成后，点击 **"Manage App"**（管理应用）进入仪表盘（dashboard）
-5. 在设置（settings）中向下滚动到 **Domains**（域名）部分，找到你要用来替换 `readme-typing-svg.demolab.com` 的 URL
+3. 在出現的頁面上，點擊表單末尾的 **"Deploy App"**（部屬應用程式）
+4. 應用程式部屬完成後，點擊 **"Manage App"**（管理應用程式）進入儀表板（dashboard）
+5. 在設定（settings）中向下捲動到 **Domains**（網域）區段，找到你要用來替換 `readme-typing-svg.demolab.com` 的 URL
 
-## 🤗 参与贡献（Contributing）
+## 🤗 參與貢獻（Contributing）
 
-欢迎贡献！如果你有办法改进这个项目，欢迎提交 Issue 或提交 Pull Request。
+歡迎貢獻！如果你有辦法改進這個專案，歡迎提出 Issue 或提交 Pull Request。
 
-请确保你的请求是有意义的，并且在提交 Pull Request 之前已经对应用做了本地测试。
+請確保你的請求是有意義的，並且在提交 Pull Request 之前已經對應用程式做了本地測試。
 
-更多关于贡献、安装依赖以及运行应用的内容，请参阅 [CONTRIBUTING.md](/CONTRIBUTING.md)。
+更多關於貢獻、安裝依賴與執行應用程式的內容，請參閱 [CONTRIBUTING.md](/CONTRIBUTING.zh-TW.md)。
 
-## 🙋‍♂️ 支持
+## 🙋‍♂️ 支援
 
-💙 如果你喜欢这个项目，就给个 ⭐ 并分享给朋友吧！
+💙 如果你喜歡這個專案，就給個 ⭐ 並分享給朋友吧！
 
 <!-- markdownlint-disable MD033 -->
 <p align="left">
-  <a href="https://www.youtube.com/channel/UCipSxT7a3rn81vGLw9lqRkg?sub_confirmation=1"><img alt="订阅" title="订阅" src="https://img.shields.io/badge/-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white"/></a>
-  <a href="https://github.com/sponsors/DenverCoder1"><img alt="在 GitHub 上赞助" title="在 GitHub 上赞助" src="https://img.shields.io/badge/-Sponsor-ea4aaa?style=for-the-badge&logo=github&logoColor=white"/></a>
+  <a href="https://www.youtube.com/channel/UCipSxT7a3rn81vGLw9lqRkg?sub_confirmation=1"><img alt="訂閱" title="訂閱" src="https://img.shields.io/badge/-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white"/></a>
+  <a href="https://github.com/sponsors/DenverCoder1"><img alt="在 GitHub 上贊助" title="在 GitHub 上贊助" src="https://img.shields.io/badge/-Sponsor-ea4aaa?style=for-the-badge&logo=github&logoColor=white"/></a>
 </p>
 <!-- markdownlint-enable MD033 -->
 
-[☕ 请我喝杯咖啡](https://ko-fi.com/jlawrence)
+[☕ 請我喝杯咖啡](https://ko-fi.com/jlawrence)
 
 ---
 
-用 ❤️ 和 PHP 制作
+用 ❤️ 和 PHP 製作
 
 <!-- markdownlint-disable MD033 -->
 
-<a href="https://heroku.com/"><img alt="由 Heroku 提供支持" title="由 Heroku 提供支持" src="https://img.shields.io/badge/-Powered%20by%20Heroku-6567a5?style=for-the-badge&logo=heroku&logoColor=white"/></a>
+<a href="https://heroku.com/"><img alt="由 Heroku 提供支援" title="由 Heroku 提供支援" src="https://img.shields.io/badge/-Powered%20by%20Heroku-6567a5?style=for-the-badge&logo=heroku&logoColor=white"/></a>
 
 <!-- markdownlint-enable MD033 -->
 
-本项目使用了 [Twemoji](https://github.com/twitter/twemoji)，并以 [CC-BY 4.0 许可](https://creativecommons.org/licenses/by/4.0/)发布。
+本專案使用了 [Twemoji](https://github.com/twitter/twemoji)，並以 [CC-BY 4.0 授權](https://creativecommons.org/licenses/by/4.0/)發布。
