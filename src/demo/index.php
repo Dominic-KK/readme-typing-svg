@@ -72,7 +72,15 @@
                         </svg>
                     </a>
                 </div>
-                <input class="param" type="text" id="font" name="font" alt="Font name" placeholder="Fira Code" value="Fira Code" pattern="^[A-Za-z0-9\- ]*$" data-i18n-title="font.title" title="Font from Google Fonts. Only letters, numbers, and spaces.">
+                <select class="param" id="font" name="font" alt="Font name">
+                    <option value="Fira Code">Fira Code</option>
+                    <option value="CangErJinKai">苍耳今楷</option>
+                    <option value="JetBrains Mono">JetBrains Mono</option>
+                    <option value="monospace">monospace</option>
+                    <option value="Source Code Pro">Source Code Pro</option>
+                    <option value="Noto Sans Mono">Noto Sans Mono</option>
+                    <option value="Roboto Mono">Roboto Mono</option>
+                </select>
 
                 <label for="weight" data-i18n="weight">Font weight</label>
                 <input class="param" type="number" id="weight" name="weight" alt="Font weight" placeholder="400" value="400" min="100" max="900" step="100">
@@ -89,7 +97,20 @@
                         </svg>
                     </a>
                 </div>
-                <input class="param" type="text" id="letterSpacing" name="letterSpacing" alt="Letter spacing" placeholder="normal" value="normal">
+                <select class="param" id="letterSpacing" name="letterSpacing" alt="Letter spacing">
+                    <option value="normal">normal</option>
+                    <option value="inherit">inherit</option>
+                    <option value="initial">initial</option>
+                    <option value="revert">revert</option>
+                    <option value="revert-layer">revert-layer</option>
+                    <option value="unset">unset</option>
+                    <option value="0.1em">0.1em</option>
+                    <option value="0.2em">0.2em</option>
+                    <option value="0.3em">0.3em</option>
+                    <option value="0.5em">0.5em</option>
+                    <option value="1px">1px</option>
+                    <option value="2px">2px</option>
+                </select>
 
                 <label for="duration" data-i18n="duration">Duration (ms per line)</label>
                 <input class="param" type="number" id="duration" name="duration" alt="Print duration (ms)" placeholder="5000" value="5000">
@@ -98,10 +119,10 @@
                 <input class="param" type="number" id="pause" name="pause" alt="Pause duration (ms)" placeholder="1000" value="1000">
 
                 <label for="color" data-i18n="color">Font color</label>
-                <input class="param jscolor jscolor-active" id="color" name="color" alt="Font color" data-jscolor="{ format: 'hexa' }" value="#36BCF7">
+                <input class="param jscolor jscolor-active" id="color" name="color" alt="Font color" data-jscolor="{ format: 'hexa' }" value="#9A53F7FF">
 
                 <label for="background" data-i18n="background">Background color</label>
-                <input class="param jscolor jscolor-active" id="background" name="background" alt="Background color" data-jscolor="{ format: 'hexa' }" value="#00000000">
+                <input class="param jscolor jscolor-active" id="background" name="background" alt="Background color" data-jscolor="{ format: 'hexa' }" value="#101010E6">
 
                 <label for="center" data-i18n="center">Horizontally Centered</label>
                 <select class="param" id="center" name="center" alt="Horizontally Centered">

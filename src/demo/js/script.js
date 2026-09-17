@@ -3,8 +3,8 @@ const preview = {
   defaults: {
     font: "monospace",
     weight: "400",
-    color: "36BCF7",
-    background: "00000000",
+    color: "9A53F7FF",
+    background: "101010E6",
     size: "20",
     letterSpacing: "normal",
     center: "false",
@@ -23,6 +23,15 @@ const preview = {
     font: "Fira Code",
     pause: "1000",
     width: "435",
+  },
+
+  /**
+   * Get the default font for the current language.
+   * Chinese uses the locally-hosted 苍耳今楷 font; other languages use Fira Code.
+   * @returns {string} The default font family for the active language
+   */
+  getDefaultFont() {
+    return window.i18n && window.i18n.lang() === "zh-CN" ? "CangErJinKai" : "Fira Code";
   },
   // fallback dummy text for default line values
   _fallbackDummyText: [
@@ -286,6 +295,8 @@ const preview = {
     // get parameters from URL
     const urlParams = new URLSearchParams(window.location.search);
     const params = { ...this.defaults, ...this.overrides, ...Object.fromEntries(urlParams) };
+    // use the language-specific default font when the URL doesn't set one
+    if (!urlParams.has("font")) params.font = this.getDefaultFont();
     // set all parameters
     const inputs = document.querySelectorAll(".param");
     inputs.forEach((input) => {
@@ -358,6 +369,11 @@ document.addEventListener("click", () => preview.update(), false);
 if (window.i18n) {
   window.i18n.onChange(() => {
     const dummy = preview.getDummyText();
+    // switch the font to the language-specific default if it's still on a default
+    const fontEl = document.getElementById("font");
+    if (fontEl && ["Fira Code", "CangErJinKai"].includes(fontEl.value)) {
+      fontEl.value = preview.getDefaultFont();
+    }
     document.querySelectorAll(".lines label[data-index]").forEach((label) => {
       const n = Number(label.dataset.index);
       label.innerText = window.i18n.t("line", { n });
@@ -379,6 +395,7 @@ if (window.i18n) {
         input.value = dummy[i % dummy.length];
       }
     });
+    preview.update(); // refresh the SVG preview after language/font changes
   });
 }
 

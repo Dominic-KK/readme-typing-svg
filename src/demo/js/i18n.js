@@ -64,7 +64,6 @@
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const attr = el.dataset.i18n;
         const text = i18n.t(attr);
-        if (attr === "color" || attr === "background") return; // input value, handled by JS
         el.textContent = text;
       });
       document.querySelectorAll("[data-i18n-value]").forEach((el) => {

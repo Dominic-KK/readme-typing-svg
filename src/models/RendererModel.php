@@ -68,8 +68,8 @@ class RendererModel
     private $DEFAULTS = [
         "font" => "monospace",
         "weight" => "400",
-        "color" => "#36BCF7",
-        "background" => "#00000000",
+        "color" => "#9A53F7FF",
+        "background" => "#101010E6",
         "size" => "20",
         "center" => "false",
         "vCenter" => "false",
@@ -217,6 +217,10 @@ class RendererModel
      */
     private function fetchFontCSS($font, $weight, $text)
     {
+        // local Chinese font hosted on this site
+        if ($font === "CangErJinKai") {
+            return "<style>\n@font-face {\nfont-family: 'CangErJinKai';\nsrc: url('https://dk-bucket.dominic.dpdns.org/picgo/2026/09/171056-88a.ttf') format('truetype');\n}\n</style>\n";
+        }
         // skip checking if left as default
         if ($font != $this->DEFAULTS["font"]) {
             // fetch and convert from Google Fonts
