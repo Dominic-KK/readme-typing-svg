@@ -6,6 +6,9 @@ WORKDIR /app
 # 先复制清单文件，便于利用 Docker 缓存层
 COPY composer.json composer.lock ./
 
+# 复制应用源码（autoload 配置引用 src/models 等目录，composer 生成 autoloader 时需扫描它们）
+COPY src ./src
+
 # 仅安装生产依赖，并生成优化后的 autoloader
 RUN composer install --no-dev --no-interaction --no-progress --optimize-autoloader
 
