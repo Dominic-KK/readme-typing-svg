@@ -71,7 +71,8 @@ class GoogleFontConverter
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         $response = curl_exec($ch);
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
+        // PHP 8.0+ 中 curl handle 由 GC 自动关闭，curl_close() 已废弃(no-op)，
+        // 调用会在 PHP 8.5+ 输出 Deprecated 警告，污染 SVG 导致无法渲染。
         if ($httpCode != ResponseEnum::HTTP_OK->value) {
             throw new InvalidArgumentException("Failed to fetch Google Font from API.");
         }
